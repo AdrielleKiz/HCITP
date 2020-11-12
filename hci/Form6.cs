@@ -16,5 +16,12 @@ namespace hci
         {
             InitializeComponent();
         }
+
+        private void Exit(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form3 Menu = new Form3();
+            Menu.Show();
+        }
     }
 }

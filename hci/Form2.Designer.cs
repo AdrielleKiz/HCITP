@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbxFirstN = new System.Windows.Forms.TextBox();
+            this.txbxLastN = new System.Windows.Forms.TextBox();
+            this.txbxEmail = new System.Windows.Forms.TextBox();
+            this.txbxAdd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbxNum = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txbxUname = new System.Windows.Forms.TextBox();
+            this.txbxPass = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -61,41 +61,41 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign Up : Information";
             // 
-            // textBox1
+            // txbxFirstN
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(12, 104);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 28);
-            this.textBox1.TabIndex = 1;
+            this.txbxFirstN.BackColor = System.Drawing.SystemColors.Info;
+            this.txbxFirstN.Location = new System.Drawing.Point(12, 104);
+            this.txbxFirstN.Multiline = true;
+            this.txbxFirstN.Name = "txbxFirstN";
+            this.txbxFirstN.Size = new System.Drawing.Size(179, 28);
+            this.txbxFirstN.TabIndex = 1;
             // 
-            // textBox2
+            // txbxLastN
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(197, 104);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 28);
-            this.textBox2.TabIndex = 2;
+            this.txbxLastN.BackColor = System.Drawing.SystemColors.Info;
+            this.txbxLastN.Location = new System.Drawing.Point(197, 104);
+            this.txbxLastN.Multiline = true;
+            this.txbxLastN.Name = "txbxLastN";
+            this.txbxLastN.Size = new System.Drawing.Size(190, 28);
+            this.txbxLastN.TabIndex = 2;
             // 
-            // textBox3
+            // txbxEmail
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox3.Location = new System.Drawing.Point(12, 152);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(371, 31);
-            this.textBox3.TabIndex = 3;
+            this.txbxEmail.BackColor = System.Drawing.SystemColors.Info;
+            this.txbxEmail.Location = new System.Drawing.Point(12, 152);
+            this.txbxEmail.Multiline = true;
+            this.txbxEmail.Name = "txbxEmail";
+            this.txbxEmail.Size = new System.Drawing.Size(371, 31);
+            this.txbxEmail.TabIndex = 3;
             // 
-            // textBox4
+            // txbxAdd
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Location = new System.Drawing.Point(12, 207);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(371, 28);
-            this.textBox4.TabIndex = 4;
+            this.txbxAdd.BackColor = System.Drawing.SystemColors.Info;
+            this.txbxAdd.Location = new System.Drawing.Point(12, 207);
+            this.txbxAdd.Multiline = true;
+            this.txbxAdd.Name = "txbxAdd";
+            this.txbxAdd.Size = new System.Drawing.Size(371, 28);
+            this.txbxAdd.TabIndex = 4;
             // 
             // label2
             // 
@@ -147,14 +147,14 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Phone Number:";
             // 
-            // textBox5
+            // txbxNum
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox5.Location = new System.Drawing.Point(12, 257);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(371, 29);
-            this.textBox5.TabIndex = 10;
+            this.txbxNum.BackColor = System.Drawing.SystemColors.Info;
+            this.txbxNum.Location = new System.Drawing.Point(12, 257);
+            this.txbxNum.Multiline = true;
+            this.txbxNum.Name = "txbxNum";
+            this.txbxNum.Size = new System.Drawing.Size(371, 29);
+            this.txbxNum.TabIndex = 10;
             // 
             // comboBox1
             // 
@@ -198,23 +198,23 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Create Password";
             // 
-            // textBox6
+            // txbxUname
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox6.Location = new System.Drawing.Point(12, 308);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(371, 30);
-            this.textBox6.TabIndex = 15;
+            this.txbxUname.BackColor = System.Drawing.SystemColors.Info;
+            this.txbxUname.Location = new System.Drawing.Point(12, 308);
+            this.txbxUname.Multiline = true;
+            this.txbxUname.Name = "txbxUname";
+            this.txbxUname.Size = new System.Drawing.Size(371, 30);
+            this.txbxUname.TabIndex = 15;
             // 
-            // textBox7
+            // txbxPass
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox7.Location = new System.Drawing.Point(12, 360);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(371, 30);
-            this.textBox7.TabIndex = 16;
+            this.txbxPass.BackColor = System.Drawing.SystemColors.Info;
+            this.txbxPass.Location = new System.Drawing.Point(12, 360);
+            this.txbxPass.Multiline = true;
+            this.txbxPass.Name = "txbxPass";
+            this.txbxPass.Size = new System.Drawing.Size(371, 30);
+            this.txbxPass.TabIndex = 16;
             // 
             // label10
             // 
@@ -222,9 +222,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(9, 393);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(296, 13);
+            this.label10.Size = new System.Drawing.Size(281, 13);
             this.label10.TabIndex = 17;
-            this.label10.Text = "*Take Note: Password should be came from the Administrator";
+            this.label10.Text = "*Take Note: Password should come from the Administrator";
             // 
             // button1
             // 
@@ -269,22 +269,22 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txbxPass);
+            this.Controls.Add(this.txbxUname);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txbxNum);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbxAdd);
+            this.Controls.Add(this.txbxEmail);
+            this.Controls.Add(this.txbxLastN);
+            this.Controls.Add(this.txbxFirstN);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -300,22 +300,22 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txbxFirstN;
+        private System.Windows.Forms.TextBox txbxLastN;
+        private System.Windows.Forms.TextBox txbxEmail;
+        private System.Windows.Forms.TextBox txbxAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbxNum;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txbxUname;
+        private System.Windows.Forms.TextBox txbxPass;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

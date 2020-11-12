@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnDash = new System.Windows.Forms.Button();
+            this.btnProductDeets = new System.Windows.Forms.Button();
+            this.btnOrderDeets = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lnkLogout = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,76 +72,82 @@
             this.label1.Text = "Main Menu";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // btnDash
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(91, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 64);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "DASHBOARD";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDash.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDash.Location = new System.Drawing.Point(91, 130);
+            this.btnDash.Name = "btnDash";
+            this.btnDash.Size = new System.Drawing.Size(167, 64);
+            this.btnDash.TabIndex = 1;
+            this.btnDash.Text = "DASHBOARD";
+            this.btnDash.UseVisualStyleBackColor = false;
+            this.btnDash.Click += new System.EventHandler(this.Dashboard);
             // 
-            // button2
+            // btnProductDeets
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(91, 219);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 64);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "PRODUCT DETAILS";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnProductDeets.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnProductDeets.Location = new System.Drawing.Point(91, 219);
+            this.btnProductDeets.Name = "btnProductDeets";
+            this.btnProductDeets.Size = new System.Drawing.Size(167, 64);
+            this.btnProductDeets.TabIndex = 2;
+            this.btnProductDeets.Text = "PRODUCT DETAILS";
+            this.btnProductDeets.UseVisualStyleBackColor = false;
+            this.btnProductDeets.Click += new System.EventHandler(this.ProductDeets);
             // 
-            // button3
+            // btnOrderDeets
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(358, 130);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 64);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "ORDER DETAILS";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnOrderDeets.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOrderDeets.Location = new System.Drawing.Point(358, 130);
+            this.btnOrderDeets.Name = "btnOrderDeets";
+            this.btnOrderDeets.Size = new System.Drawing.Size(167, 64);
+            this.btnOrderDeets.TabIndex = 3;
+            this.btnOrderDeets.Text = "ORDER DETAILS";
+            this.btnOrderDeets.UseVisualStyleBackColor = false;
+            this.btnOrderDeets.Click += new System.EventHandler(this.OrderDeets);
             // 
-            // button4
+            // btnEmployees
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(358, 219);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(167, 64);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "EMPLOYEES";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnEmployees.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEmployees.Location = new System.Drawing.Point(358, 219);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(167, 64);
+            this.btnEmployees.TabIndex = 4;
+            this.btnEmployees.Text = "EMPLOYEES";
+            this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Click += new System.EventHandler(this.Emp);
             // 
-            // button5
+            // btnExit
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.Location = new System.Drawing.Point(214, 320);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 64);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "EXIT";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnExit.Location = new System.Drawing.Point(214, 320);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(167, 64);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.Exit);
+            // 
+            // lnkLogout
+            // 
+            this.lnkLogout.AutoSize = true;
+            this.lnkLogout.LinkColor = System.Drawing.Color.Black;
+            this.lnkLogout.Location = new System.Drawing.Point(15, 428);
+            this.lnkLogout.Name = "lnkLogout";
+            this.lnkLogout.Size = new System.Drawing.Size(40, 13);
+            this.lnkLogout.TabIndex = 7;
+            this.lnkLogout.TabStop = true;
+            this.lnkLogout.Text = "Logout";
+            this.lnkLogout.Click += new System.EventHandler(this.Logout);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(508, 428);
+            this.label3.Location = new System.Drawing.Point(499, 428);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "User: irincoimee";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(15, 428);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(40, 13);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Logout";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 8;
+            this.label3.VisibleChanged += new System.EventHandler(this.Username);
             // 
             // Form3
             // 
@@ -149,13 +155,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(602, 450);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lnkLogout);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnEmployees);
+            this.Controls.Add(this.btnOrderDeets);
+            this.Controls.Add(this.btnProductDeets);
+            this.Controls.Add(this.btnDash);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Form3";
@@ -173,12 +179,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnDash;
+        private System.Windows.Forms.Button btnProductDeets;
+        private System.Windows.Forms.Button btnOrderDeets;
+        private System.Windows.Forms.Button btnEmployees;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.LinkLabel lnkLogout;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

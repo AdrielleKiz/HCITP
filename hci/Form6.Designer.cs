@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,6 +71,27 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(475, 305);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // ItemName
+            // 
+            this.ItemName.DataPropertyName = "ItemName";
+            this.ItemName.HeaderText = "Quantity";
+            this.ItemName.Name = "ItemName";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "SKU";
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Unit of Measure";
+            this.Column1.Name = "Column1";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Description";
+            this.Column4.Name = "Column4";
             // 
             // label1
             // 
@@ -101,6 +122,16 @@
             this.panel1.Size = new System.Drawing.Size(398, 395);
             this.panel1.TabIndex = 22;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button5.Location = new System.Drawing.Point(209, 151);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(125, 34);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "Clear All";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.RosyBrown;
@@ -120,16 +151,6 @@
             this.label9.TabIndex = 23;
             this.label9.Text = "Last Order Date";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button4.Location = new System.Drawing.Point(423, 377);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 30);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Insert";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RosyBrown;
@@ -148,26 +169,6 @@
             this.label8.Size = new System.Drawing.Size(115, 23);
             this.label8.TabIndex = 23;
             this.label8.Text = "Order Count";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button3.Location = new System.Drawing.Point(606, 377);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 30);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button2.Location = new System.Drawing.Point(513, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // textBox4
             // 
@@ -189,6 +190,13 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(232, 20);
             this.textBox2.TabIndex = 15;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(144, 125);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(232, 20);
+            this.textBox1.TabIndex = 14;
             // 
             // label6
             // 
@@ -230,53 +238,46 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Unit of Measure:";
             // 
-            // textBox1
+            // button4
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 125);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 20);
-            this.textBox1.TabIndex = 14;
+            this.button4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button4.Location = new System.Drawing.Point(423, 377);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 30);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Insert";
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // ItemName
+            // button3
             // 
-            this.ItemName.DataPropertyName = "ItemName";
-            this.ItemName.HeaderText = "Quantity";
-            this.ItemName.Name = "ItemName";
+            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button3.Location = new System.Drawing.Point(606, 377);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(82, 30);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // Column2
+            // button2
             // 
-            this.Column2.HeaderText = "SKU";
-            this.Column2.Name = "Column2";
+            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button2.Location = new System.Drawing.Point(513, 377);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 30);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Update";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // Column1
+            // btnExit
             // 
-            this.Column1.HeaderText = "Unit of Measure";
-            this.Column1.Name = "Column1";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Description";
-            this.Column4.Name = "Column4";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.Location = new System.Drawing.Point(823, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button5.Location = new System.Drawing.Point(209, 151);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 34);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "Clear All";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnExit.Location = new System.Drawing.Point(823, 377);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 30);
+            this.btnExit.TabIndex = 25;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.Exit);
             // 
             // button6
             // 
@@ -294,7 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 473);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
@@ -342,7 +343,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
     }
