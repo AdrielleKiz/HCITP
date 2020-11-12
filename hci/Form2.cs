@@ -18,6 +18,24 @@ namespace hci
             InitializeComponent();
         }
 
+        private void ExecuteQuery(string txtQuery)
+        {
+            SQLiteConnection sqlCon = new SQLiteConnection(@"Data Source=Database.db ;Version=3;");
+            sqlCon.Open();
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd = sqlCon.CreateCommand();
+            cmd.CommandText = txtQuery;
+
+            cmd.ExecuteNonQuery();
+            sqlCon.Close();
+        }
+
+        private void Add()
+        {
+            string txtSQLQuery = "insert into UserInformation (FirstName,Lastname,EmailAddress,Address,PhoneNumber,UserName,Password) values ('" + this.txbxFirstN.Text + "','" + this.txbxLastN.Text + "','" + this.txbxEmail.Text + "','" + this.txbxAdd.Text + "','" + this.txbxNum.Text + "','" + this.txbxUname.Text + "','" + this.txbxPass.Text + "')";
+            ExecuteQuery(txtSQLQuery);
+        }
+
         private void btnSave(object sender, EventArgs e)
         {
 
@@ -27,37 +45,8 @@ namespace hci
             }
             else
             {
-                string dbConnection = "Data Source=Database.db ;Version=3;";
-                using (SQLiteConnection myConnection = new SQLiteConnection(dbConnection))
-                {
-                    SQLiteCommand sqlCommand = new SQLiteCommand("INSERT INTO Products (First_Name,Last_Name,Company_Name,Address1,Address2,City,State,Zip,Phone_Number1,Phone_Number2,Email_Address) Values (@First_Name, @Last_Name,@Company_Name, @Address1,@Address2, @City,@State, @Zip, @Phone_Number1, @Phone_Number2, @Email_Address,)", myConnection);
-                    sqlCommand.Parameters.AddWithValue("@FirstName", txbxFirstN.Text);
-                    sqlCommand.Parameters.AddWithValue("@Lastname", txbxLastN.Text);
-                    sqlCommand.Parameters.AddWithValue("@EmailAddress", txbxEmail.Text);
-                    sqlCommand.Parameters.AddWithValue("@Address", txbxAdd.Text);
-                    sqlCommand.Parameters.AddWithValue("@PhoneNumber", txbxNum.Text);
-                    sqlCommand.Parameters.AddWithValue("@UserName", txbxUname.Text);
-                    sqlCommand.Parameters.AddWithValue("@Password", txbxPass.Text);
-
-                    myConnection.Open();
-                }
-                    
-
-                    //string query = "INSERT INTO UserInformation (FirstName,Lastname,EmailAddress,Address,PhoneNumber,UserName,Password)";
-                    //SQLiteConnection Con = new SQLiteConnection("Data Source=Database.db;Version=3;");
-                    //Con.Open();
-                    //SQLiteCommand cmd = new SQLiteCommand(query, Con);
-                    //cmd.Parameters.AddWithValue("@FirstName", txbxFirstN.Text);
-                    //cmd.Parameters.AddWithValue("@Lastname", txbxLastN.Text);
-                    //cmd.Parameters.AddWithValue("@EmailAddress", txbxEmail.Text);
-                    //cmd.Parameters.AddWithValue("@Address", txbxAdd.Text);
-                    //cmd.Parameters.AddWithValue("@PhoneNumber", txbxNum.Text);
-                    //cmd.Parameters.AddWithValue("@UserName", txbxUname.Text);
-                    //cmd.Parameters.AddWithValue("@Password", txbxPass.Text);
-                    //SQLiteDataAdapter DA = new SQLiteDataAdapter(cmd);
-                    //cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Sign Up Successful");
+                Add();
+                MessageBox.Show("Sign Up Successful");
                 this.Visible = false;
                 Form1 loginForm = new Form1();
                 loginForm.Show();
