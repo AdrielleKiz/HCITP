@@ -30,16 +30,18 @@ namespace hci
                 string dbConnection = "Data Source=Database.db ;Version=3;";
                 using (SQLiteConnection myConnection = new SQLiteConnection(dbConnection))
                 {
-                    SQLiteCommand sqlCommand = new SQLiteCommand("INSERT INTO Products (First_Name,Last_Name,Company_Name,Address1,Address2,City,State,Zip,Phone_Number1,Phone_Number2,Email_Address) Values (@First_Name, @Last_Name,@Company_Name, @Address1,@Address2, @City,@State, @Zip, @Phone_Number1, @Phone_Number2, @Email_Address,)", myConnection);
+                    SQLiteCommand sqlCommand = new SQLiteCommand("INSERT INTO UserInformation (FirstName,LastName,Address,PhoneNumber,EmailAddress) Values (@FirstName, @LastName,@Address,@PhoneNumber,@EmailAddress);", myConnection);
                     sqlCommand.Parameters.AddWithValue("@FirstName", txbxFirstN.Text);
                     sqlCommand.Parameters.AddWithValue("@Lastname", txbxLastN.Text);
                     sqlCommand.Parameters.AddWithValue("@EmailAddress", txbxEmail.Text);
                     sqlCommand.Parameters.AddWithValue("@Address", txbxAdd.Text);
                     sqlCommand.Parameters.AddWithValue("@PhoneNumber", txbxNum.Text);
-                    sqlCommand.Parameters.AddWithValue("@UserName", txbxUname.Text);
-                    sqlCommand.Parameters.AddWithValue("@Password", txbxPass.Text);
+/*                     sqlCommand.Parameters.AddWithValue("@UserName", txbxUname.Text);
+                    sqlCommand.Parameters.AddWithValue("@Password", txbxPass.Text); */
 
                     myConnection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    
                 }
                     
 
