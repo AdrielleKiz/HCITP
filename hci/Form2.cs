@@ -20,20 +20,20 @@ namespace hci
 
         private void ExecuteQuery(string txtQuery)
         {
-            SQLiteConnection sqlCon = new SQLiteConnection(@"Data Source=Database.db ;Version=3;");
-            sqlCon.Open();
+            SQLiteConnection Con = new SQLiteConnection(@"Data Source = Database.db ;Version=3;");
+            Con.Open();
             SQLiteCommand cmd = new SQLiteCommand();
-            cmd = sqlCon.CreateCommand();
+            cmd = Con.CreateCommand();
             cmd.CommandText = txtQuery;
 
             cmd.ExecuteNonQuery();
-            sqlCon.Close();
+            Con.Close();
         }
-
         private void Add()
         {
-            string txtSQLQuery = "insert into UserInformation (FirstName,Lastname,EmailAddress,Address,PhoneNumber,UserName,Password) values ('" + this.txbxFirstN.Text + "','" + this.txbxLastN.Text + "','" + this.txbxEmail.Text + "','" + this.txbxAdd.Text + "','" + this.txbxNum.Text + "','" + this.txbxUname.Text + "','" + this.txbxPass.Text + "')";
+            string txtSQLQuery = "INSERT INTO UserInformation (FirstName,Lastname,EmailAddress,Address,PhoneNumber,UserName,Password) values ('" + this.txbxFirstN.Text + "','" + this.txbxLastN.Text + "','" + this.txbxEmail.Text + "','" + this.txbxAdd.Text + "','" + this.txbxNum.Text + "','" + this.txbxUname.Text + "','" + this.txbxPass.Text + "')";
             ExecuteQuery(txtSQLQuery);
+            
         }
 
         private void btnSave(object sender, EventArgs e)
