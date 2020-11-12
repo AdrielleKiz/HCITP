@@ -18,6 +18,24 @@ namespace hci
             InitializeComponent();
         }
 
+        private void ExecuteQuery(string txtQuery)
+        {
+            SQLiteConnection Con = new SQLiteConnection(@"Data Source = Database.db ;Version=3;");
+            Con.Open();
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd = Con.CreateCommand();
+            cmd.CommandText = txtQuery;
+
+            cmd.ExecuteNonQuery();
+            Con.Close();
+        }
+        private void Add()
+        {
+            string txtSQLQuery = "INSERT INTO UserInformation (FirstName,Lastname,EmailAddress,Address,PhoneNumber,UserName,Password) values ('" + this.txbxFirstN.Text + "','" + this.txbxLastN.Text + "','" + this.txbxEmail.Text + "','" + this.txbxAdd.Text + "','" + this.txbxNum.Text + "','" + this.txbxUname.Text + "','" + this.txbxPass.Text + "')";
+            ExecuteQuery(txtSQLQuery);
+            
+        }
+
         private void btnSave(object sender, EventArgs e)
         {
 
@@ -60,6 +78,8 @@ namespace hci
                     //cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Sign Up Successful");
+                Add();
+                MessageBox.Show("Sign Up Successful");
                 this.Visible = false;
                 Form1 loginForm = new Form1();
                 loginForm.Show();
