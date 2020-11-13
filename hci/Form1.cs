@@ -15,6 +15,7 @@ namespace hci
     public partial class Form1 : Form
     {
         public static string SetValueForText1 = "";
+        public static string PermissionLevel = "";
         public Form1()
         {
             InitializeComponent();
@@ -51,11 +52,20 @@ namespace hci
                 if(DT.Rows.Count > 0)
                 {
 
+                    string fetchPermsquery = "SELECT Permissions FROM UserInformation WHERE UserName = @textBox1";
+                    SQLiteCommand getPerms = new SQLiteCommand(fetchPermsquery, Con);
+                    getPerms.Parameters.AddWithValue("@textBox1",textBox1.Text);
+                    PermissionLevel = (string)getPerms.ExecuteScalar();
+                   
+                    
+
+                    
                     SetValueForText1 = textBox1.Text;
                     this.Visible = false;
                     Form3 mainMenu = new Form3();
                     mainMenu.Show();
                     MessageBox.Show("Login Successful");
+
                 }
                 else
                 {
