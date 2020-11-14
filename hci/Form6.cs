@@ -23,5 +23,24 @@ namespace hci
             Form3 Menu = new Form3();
             Menu.Show();
         }
+
+        private void ClrAll_Click(object sender, EventArgs e)
+        {
+            txtqntty.Clear();
+            txtboxsku.Clear();
+            txtboxUofM.Clear();
+            txtdsptn.Clear();
+        }
+
+        private void insertbtn_Click(object sender, EventArgs e)
+        {
+            dgvOrderDtls.Rows.Add(txtqntty.Text,txtboxsku.Text,txtboxUofM.Text,txtdsptn.Text);
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            int rowindex = dgvOrderDtls.CurrentCell.RowIndex;
+            dgvOrderDtls.Rows.RemoveAt(rowindex);
+        }
     }
 }

@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usertxtbox = new System.Windows.Forms.TextBox();
+            this.passtxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.loginbtn = new System.Windows.Forms.Button();
+            this.cancelbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLblsignup = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // textBox1
+            // usertxtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 20);
-            this.textBox1.TabIndex = 0;
+            this.usertxtbox.Location = new System.Drawing.Point(118, 120);
+            this.usertxtbox.Name = "usertxtbox";
+            this.usertxtbox.Size = new System.Drawing.Size(211, 20);
+            this.usertxtbox.TabIndex = 0;
             // 
-            // textBox2
+            // passtxtbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
-            this.textBox2.TabIndex = 1;
+            this.passtxtbox.Location = new System.Drawing.Point(117, 151);
+            this.passtxtbox.Name = "passtxtbox";
+            this.passtxtbox.Size = new System.Drawing.Size(212, 20);
+            this.passtxtbox.TabIndex = 1;
             // 
             // label1
             // 
@@ -74,30 +74,30 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
-            // button1
+            // loginbtn
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(117, 183);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnLogin);
+            this.loginbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.loginbtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginbtn.Location = new System.Drawing.Point(117, 183);
+            this.loginbtn.Name = "loginbtn";
+            this.loginbtn.Size = new System.Drawing.Size(75, 31);
+            this.loginbtn.TabIndex = 4;
+            this.loginbtn.Text = "Login";
+            this.loginbtn.UseVisualStyleBackColor = false;
+            this.loginbtn.Click += new System.EventHandler(this.btnLogin);
             // 
-            // button2
+            // cancelbtn
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(254, 183);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.btnCancel);
+            this.cancelbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cancelbtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelbtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelbtn.Location = new System.Drawing.Point(254, 183);
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.Size = new System.Drawing.Size(75, 31);
+            this.cancelbtn.TabIndex = 5;
+            this.cancelbtn.Text = "Cancel";
+            this.cancelbtn.UseVisualStyleBackColor = false;
+            this.cancelbtn.Click += new System.EventHandler(this.btnCancel);
             // 
             // label3
             // 
@@ -118,36 +118,36 @@
             this.label4.Text = "STOCK DATABASE";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // linkLabel1
+            // linkLblsignup
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(181, 236);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(74, 16);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Signing up?";
-            this.linkLabel1.Click += new System.EventHandler(this.lnkSignup);
+            this.linkLblsignup.AutoSize = true;
+            this.linkLblsignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblsignup.LinkColor = System.Drawing.Color.Black;
+            this.linkLblsignup.Location = new System.Drawing.Point(181, 236);
+            this.linkLblsignup.Name = "linkLblsignup";
+            this.linkLblsignup.Size = new System.Drawing.Size(73, 15);
+            this.linkLblsignup.TabIndex = 9;
+            this.linkLblsignup.TabStop = true;
+            this.linkLblsignup.Text = "Signing up?";
+            this.linkLblsignup.Click += new System.EventHandler(this.lnkSignup);
             // 
             // Form1
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.loginbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.CancelButton = this.button2;
+            this.CancelButton = this.cancelbtn;
             this.ClientSize = new System.Drawing.Size(400, 287);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLblsignup);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelbtn);
+            this.Controls.Add(this.loginbtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passtxtbox);
+            this.Controls.Add(this.usertxtbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -161,15 +161,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usertxtbox;
+        private System.Windows.Forms.TextBox passtxtbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button loginbtn;
+        private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLblsignup;
     }
 }
 

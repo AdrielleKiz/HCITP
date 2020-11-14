@@ -15,7 +15,6 @@ namespace hci
     public partial class Form1 : Form
     {
         public static string SetValueForText1 = "";
-        public static string PermissionLevel = "";
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +32,7 @@ namespace hci
 
         private void btnLogin(object sender, EventArgs e)
         {
-            if (textBox1.Text.Trim() == "" && textBox2.Text.Trim() == "")
+            if (usertxtbox.Text.Trim() == "" && passtxtbox.Text.Trim() == "")
             {
                 MessageBox.Show("Empty Fields");
             }
@@ -43,8 +42,8 @@ namespace hci
                 SQLiteConnection Con = new SQLiteConnection("Data Source=Database.db;Version=3;");
                 Con.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, Con);
-                cmd.Parameters.AddWithValue("@textBox1",textBox1.Text);
-                cmd.Parameters.AddWithValue("@textBox2", textBox2.Text);
+                cmd.Parameters.AddWithValue("@textBox1",usertxtbox.Text);
+                cmd.Parameters.AddWithValue("@textBox2", passtxtbox.Text);
                 SQLiteDataAdapter DA = new SQLiteDataAdapter(cmd);
                 DataTable DT = new DataTable();
                 DA.Fill(DT);
@@ -52,24 +51,19 @@ namespace hci
                 if(DT.Rows.Count > 0)
                 {
 
-                    string fetchPermsquery = "SELECT Permissions FROM UserInformation WHERE UserName = @textBox1";
-                    SQLiteCommand getPerms = new SQLiteCommand(fetchPermsquery, Con);
-                    getPerms.Parameters.AddWithValue("@textBox1",textBox1.Text);
-                    PermissionLevel = (string)getPerms.ExecuteScalar();
-                   
-                    
-
-                    
-                    SetValueForText1 = textBox1.Text;
+                    SetValueForText1 = usertxtbox.Text;
                     this.Visible = false;
                     Form3 mainMenu = new Form3();
                     mainMenu.Show();
                     MessageBox.Show("Login Successful");
-
                 }
                 else
                 {
                     MessageBox.Show("Login Failed");
+                    usertxtbox.Clear();
+                    passtxtbox.Clear();
+                    usertxtbox.Focus();
+
                 }
 
                 
