@@ -111,11 +111,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(113, 43);
+            this.label4.Location = new System.Drawing.Point(90, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(185, 23);
             this.label4.TabIndex = 8;
-            this.label4.Text = "STOCK DATABASE";
+            this.label4.Text = "Inventory Managing System";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // linkLblsignup
@@ -130,6 +130,7 @@
             this.linkLblsignup.TabStop = true;
             this.linkLblsignup.Text = "Signing up?";
             this.linkLblsignup.Click += new System.EventHandler(this.lnkSignup);
+            this.linkLblsignup.Visible = false;
             // 
             // Form1
             // 
