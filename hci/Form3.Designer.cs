@@ -59,7 +59,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(294, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Inventory System  Stock Database ";
+            this.label2.Text = "Stock Managing System";
             // 
             // label1
             // 
@@ -79,9 +79,10 @@
             this.btnDash.Name = "btnDash";
             this.btnDash.Size = new System.Drawing.Size(167, 64);
             this.btnDash.TabIndex = 1;
-            this.btnDash.Text = "DASHBOARD";
+            this.btnDash.Text = "DashBoard";
             this.btnDash.UseVisualStyleBackColor = false;
             this.btnDash.Click += new System.EventHandler(this.Dashboard);
+
             // 
             // btnProductDeets
             // 
@@ -90,7 +91,7 @@
             this.btnProductDeets.Name = "btnProductDeets";
             this.btnProductDeets.Size = new System.Drawing.Size(167, 64);
             this.btnProductDeets.TabIndex = 2;
-            this.btnProductDeets.Text = "PRODUCT DETAILS";
+            this.btnProductDeets.Text = "Products";
             this.btnProductDeets.UseVisualStyleBackColor = false;
             this.btnProductDeets.Click += new System.EventHandler(this.ProductDeets);
             // 
@@ -101,7 +102,7 @@
             this.btnOrderDeets.Name = "btnOrderDeets";
             this.btnOrderDeets.Size = new System.Drawing.Size(167, 64);
             this.btnOrderDeets.TabIndex = 3;
-            this.btnOrderDeets.Text = "ORDER DETAILS";
+            this.btnOrderDeets.Text = "Orders";
             this.btnOrderDeets.UseVisualStyleBackColor = false;
             this.btnOrderDeets.Click += new System.EventHandler(this.OrderDeets);
             // 
@@ -112,7 +113,7 @@
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(167, 64);
             this.btnEmployees.TabIndex = 4;
-            this.btnEmployees.Text = "EMPLOYEES";
+            this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = false;
             this.btnEmployees.Click += new System.EventHandler(this.Emp);
             // 
@@ -123,7 +124,7 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(167, 64);
             this.btnExit.TabIndex = 5;
-            this.btnExit.Text = "EXIT";
+            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.Exit);
             // 
@@ -166,13 +167,20 @@
             this.MaximizeBox = false;
             this.Name = "Form3";
             this.ShowIcon = false;
-            this.Text = "Stock Databse : Maim Menu";
+            this.Text = "Inventory Managing System: Main Menu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        if (Form1.Permissions == "0")
+            {
+                this.btnDash.Enabled = false;
+                this.btnEmployees.Enabled = false;
+            }
+
         }
+        
 
         #endregion
 
