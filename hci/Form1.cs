@@ -16,6 +16,27 @@ namespace hci
     {
         public static string SetValueForText1 = "";
         public static string Permissions = "";
+        //Added unique permissions
+        public static int viewdashboard;
+        public static int add_users;
+        public static int delete_users;
+        public static int modify_user_permission;
+        public static int view_dash_menu;
+        public static int view_orders_menu;
+        public static int products_menu;
+        public static int view_employees_menu;
+        public static int view_checkout_menu;
+        public static int view_checkin_menu;
+        public static int modify_checkout_details;
+        public static int modify_checkin_details;
+        public static int add_order;
+        public static int modify_order_details;
+        public static int delete_order;
+        public static int add_product;
+        public static int modify_product_details;
+        public static int delete_product;
+        public static int allow_ordering_product;
+        public static int allow_checkout;
         public Form1()
         {
             InitializeComponent();
