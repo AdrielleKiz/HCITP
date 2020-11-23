@@ -25,7 +25,7 @@ namespace hci
 
         private void Dashboard(object sender, EventArgs e)
         {
-            if (Form1.Permissions == "0")
+            if (Form1.view_dash_menu == "0")
             {
                 MessageBox.Show("You do not have sufficient permission to execute this action", "You cannot do this", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -73,7 +73,7 @@ namespace hci
 
        private void Username(object sender, EventArgs e)
         {
-            switch (Form1.Permissions)
+            switch (Form1.view_dash_menu)
             {
                 case"0":
                 title = "Employees";

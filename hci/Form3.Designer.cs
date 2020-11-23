@@ -173,7 +173,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        if (Form1.Permissions == "0")
+        if (Form1.view_dash_menu == "0")
             {
                 this.btnDash.Enabled = false;
                 this.btnEmployees.Enabled = false;
