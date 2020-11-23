@@ -15,28 +15,29 @@ namespace hci
     public partial class Form1 : Form
     {
         public static string SetValueForText1 = "";
-        public static string Permissions = "";
+        public static string user_id = "";
         //Added unique permissions
-        public static int viewdashboard;
-        public static int add_users;
-        public static int delete_users;
-        public static int modify_user_permission;
-        public static int view_dash_menu;
-        public static int view_orders_menu;
-        public static int products_menu;
-        public static int view_employees_menu;
-        public static int view_checkout_menu;
-        public static int view_checkin_menu;
-        public static int modify_checkout_details;
-        public static int modify_checkin_details;
-        public static int add_order;
-        public static int modify_order_details;
-        public static int delete_order;
-        public static int add_product;
-        public static int modify_product_details;
-        public static int delete_product;
-        public static int allow_ordering_product;
-        public static int allow_checkout;
+        public static string add_users;
+        public static string delete_users;
+        public static string modify_user_permission;
+        public static string view_dash_menu;
+        public static string view_orders_menu;
+        public static string products_menu;
+        public static string view_employees_menu;
+        public static string view_checkout_menu;
+        public static string view_checkin_menu;
+        public static string modify_checkout_details;
+        public static string modify_checkin_details;
+        public static string add_order;
+        public static string modify_order_details;
+        public static string delete_order;
+        public static string add_product;
+        public static string modify_product_details;
+        public static string delete_product;
+        public static string allow_ordering_product;
+        public static string allow_checkout;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -72,19 +73,88 @@ namespace hci
 
                 if(DT.Rows.Count > 0)
                 {
-                    string perms = "";
+                    //retrieve user_id
+                    string userid = "";
                     SQLiteConnection con = new SQLiteConnection(@"Data Source=Database.db ;Version=3;");
                     con.Open();
                     SQLiteCommand command = new SQLiteCommand();
                     command = con.CreateCommand();
-                    command.CommandText = "SELECT Permissions FROM UserInformation WHERE UserName = '"+this.usertxtbox.Text+"';";
+                    command.CommandText = "SELECT user_id FROM UserInformation WHERE UserName = '"+this.usertxtbox.Text+"';";
                     SQLiteDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            perms = reader.GetValue(0).ToString();
+                            userid = reader.GetValue(0).ToString();
                         }
-                    Permissions = perms;
-                    con.Close();
+                    user_id = userid;
+                    //end of query
+                    
+                    //retrieve permissions
+                        SQLiteCommand permcom = new SQLiteCommand();
+                        permcom = con.CreateCommand();
+                        permcom.CommandText = "select * FROM lib_permissions WHERE user_id = "+user_id+";";
+                        SQLiteDataReader readperms = permcom.ExecuteReader();              
+                        string 	addusers = " ";
+                        string 	deleteusers = " ";
+                        string 	modifyuserpermission = " ";
+                        string 	viewdashmenu = " ";
+                        string 	viewordersmenu = " ";
+                        string 	productsmenu = " ";
+                        string 	viewemployeesmenu = " ";
+                        string 	viewcheckoutmenu = " ";
+                        string 	viewcheckinmenu = " ";
+                        string 	modifycheckoutdetails = " ";
+                        string 	modifycheckindetails = " ";
+                        string 	addorder = " ";
+                        string 	modifyorderdetails = " ";
+                        string 	deleteorder = " ";
+                        string 	addproduct = " ";
+                        string 	modifyproductdetails = " ";
+                        string 	deleteproduct = " ";
+                        string 	alloworderingproduct = " ";
+                        string 	allowcheckout = " ";
+
+                        while (readperms.Read())
+                        {
+                            addusers = readperms.GetValue(1).ToString();
+                            deleteusers = readperms.GetValue(2).ToString();
+                            modifyuserpermission = readperms.GetValue(3).ToString();
+                            viewdashmenu = readperms.GetValue(4).ToString();
+                            viewordersmenu = readperms.GetValue(5).ToString();
+                            productsmenu = readperms.GetValue(6).ToString();
+                            viewemployeesmenu = readperms.GetValue(7).ToString();
+                            viewcheckoutmenu = readperms.GetValue(8).ToString();
+                            viewcheckinmenu = readperms.GetValue(9).ToString();
+                            modifycheckoutdetails = readperms.GetValue(10).ToString();
+                            modifycheckindetails = readperms.GetValue(11).ToString();
+                            addorder = readperms.GetValue(12).ToString();
+                            modifyorderdetails = readperms.GetValue(13).ToString();
+                            deleteorder = readperms.GetValue(14).ToString();
+                            addproduct = readperms.GetValue(15).ToString();
+                            modifyproductdetails = readperms.GetValue(16).ToString();
+                            deleteproduct = readperms.GetValue(17).ToString();
+                            alloworderingproduct = readperms.GetValue(18).ToString();
+                            allowcheckout = readperms.GetValue(19).ToString();
+                        }
+                    add_users =	addusers;
+                    delete_users = deleteusers;
+                    modify_user_permission = modifyuserpermission;
+                    view_dash_menu = viewdashmenu;
+                    view_orders_menu = viewordersmenu;
+                    products_menu = productsmenu;
+                    view_employees_menu = viewemployeesmenu;
+                    view_checkout_menu = viewcheckoutmenu;
+                    view_checkin_menu = viewcheckinmenu;
+                    modify_checkout_details = modifycheckoutdetails;
+                    modify_checkin_details = modifycheckindetails;
+                    add_order = addorder;
+                    modify_order_details = modifyorderdetails;
+                    delete_order = deleteorder;
+                    add_product = addproduct;
+                    modify_product_details = modifyproductdetails;
+                    delete_product = deleteproduct;
+                    allow_ordering_product = alloworderingproduct;
+                    allow_checkout = allowcheckout;
+
                     SetValueForText1 = usertxtbox.Text;
                     this.Visible = false;
                     Form3 mainMenu = new Form3();
