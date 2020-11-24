@@ -179,7 +179,28 @@
                 this.btnEmployees.Enabled = false;
             }
 
+        if (Form1.allow_checkout == "0")
+            {
+                
+            }
+
+        if (Form1.view_checkout_menu == "0")
+            {
+
+            }
+        
+        if (Form1.view_orders_menu == "0")
+            {
+                this.btnOrderDeets.Enabled = false;
+            }
+        if (Form1.view_products_menu == "0")
+            {
+                this.btnProductDeets.Enabled = false;
+            }
+
         }
+        
+
         
 
         #endregion
