@@ -22,7 +22,7 @@ namespace hci
         public static string modify_user_permission;
         public static string view_dash_menu;
         public static string view_orders_menu;
-        public static string products_menu;
+        public static string view_products_menu;
         public static string view_employees_menu;
         public static string view_checkout_menu;
         public static string view_checkin_menu;
@@ -98,7 +98,7 @@ namespace hci
                         string 	modifyuserpermission = " ";
                         string 	viewdashmenu = " ";
                         string 	viewordersmenu = " ";
-                        string 	productsmenu = " ";
+                        string 	viewproductsmenu = " ";
                         string 	viewemployeesmenu = " ";
                         string 	viewcheckoutmenu = " ";
                         string 	viewcheckinmenu = " ";
@@ -120,7 +120,7 @@ namespace hci
                             modifyuserpermission = readperms.GetValue(3).ToString();
                             viewdashmenu = readperms.GetValue(4).ToString();
                             viewordersmenu = readperms.GetValue(5).ToString();
-                            productsmenu = readperms.GetValue(6).ToString();
+                            viewproductsmenu = readperms.GetValue(6).ToString();
                             viewemployeesmenu = readperms.GetValue(7).ToString();
                             viewcheckoutmenu = readperms.GetValue(8).ToString();
                             viewcheckinmenu = readperms.GetValue(9).ToString();
@@ -140,7 +140,7 @@ namespace hci
                     modify_user_permission = modifyuserpermission;
                     view_dash_menu = viewdashmenu;
                     view_orders_menu = viewordersmenu;
-                    products_menu = productsmenu;
+                    view_products_menu = viewproductsmenu;
                     view_employees_menu = viewemployeesmenu;
                     view_checkout_menu = viewcheckoutmenu;
                     view_checkin_menu = viewcheckinmenu;
