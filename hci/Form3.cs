@@ -12,6 +12,7 @@ namespace hci
 {
     public partial class Form3 : Form
     {
+        public static string title = "";
         public Form3()
         {
             InitializeComponent();
@@ -24,9 +25,17 @@ namespace hci
 
         private void Dashboard(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Form4 Dashboard = new Form4();
-            Dashboard.Show();
+            if (Form1.view_dash_menu == "0")
+            {
+                MessageBox.Show("You do not have sufficient permission to execute this action", "You cannot do this", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                this.Visible = false;
+                Form4 Dashboard = new Form4();
+                Dashboard.Show();
+            }
+
         }
 
         private void OrderDeets(object sender, EventArgs e)
@@ -65,7 +74,22 @@ namespace hci
 
        private void Username(object sender, EventArgs e)
         {
-            this.label3.Text = "User: " + Form1.SetValueForText1;
+            switch (Form1.view_dash_menu)
+            {
+                case"0":
+                title = "Employees";
+                break;
+
+                case"1":
+                title = "Administrator";
+                break;
+
+                case"3":
+                title = "Manager";
+                break;              
+            }
+            
+            this.label3.Text = "User: " + Form1.SetValueForText1 + "Perms: " + title;
         }
     }
 }
