@@ -166,6 +166,7 @@
             this.MaximizeBox = false;
             this.Name = "Form3";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock Databse : Maim Menu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

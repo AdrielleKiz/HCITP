@@ -41,6 +41,7 @@ namespace hci
             this.Visible = false;
             Form5 ProductDeets = new Form5();
             ProductDeets.Show();
+
         }
 
         private void Emp(object sender, EventArgs e)

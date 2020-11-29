@@ -35,6 +35,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ClrAll = new System.Windows.Forms.Button();
             this.pnlLOD = new System.Windows.Forms.Panel();
             this.lvllOrD = new System.Windows.Forms.Label();
             this.pblOC = new System.Windows.Forms.Panel();
@@ -51,7 +52,6 @@
             this.updtbtn = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.vcdbtn = new System.Windows.Forms.Button();
-            this.ClrAll = new System.Windows.Forms.Button();
             this.insertbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDtls)).BeginInit();
             this.panel1.SuspendLayout();
@@ -121,6 +121,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(398, 395);
             this.panel1.TabIndex = 22;
+            // 
+            // ClrAll
+            // 
+            this.ClrAll.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClrAll.Location = new System.Drawing.Point(196, 151);
+            this.ClrAll.Name = "ClrAll";
+            this.ClrAll.Size = new System.Drawing.Size(125, 34);
+            this.ClrAll.TabIndex = 28;
+            this.ClrAll.Text = "Clear All";
+            this.ClrAll.UseVisualStyleBackColor = false;
+            this.ClrAll.Click += new System.EventHandler(this.ClrAll_Click);
             // 
             // pnlLOD
             // 
@@ -270,17 +281,6 @@
             this.vcdbtn.Text = "View Complete Details";
             this.vcdbtn.UseVisualStyleBackColor = false;
             // 
-            // ClrAll
-            // 
-            this.ClrAll.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClrAll.Location = new System.Drawing.Point(196, 151);
-            this.ClrAll.Name = "ClrAll";
-            this.ClrAll.Size = new System.Drawing.Size(125, 34);
-            this.ClrAll.TabIndex = 28;
-            this.ClrAll.Text = "Clear All";
-            this.ClrAll.UseVisualStyleBackColor = false;
-            this.ClrAll.Click += new System.EventHandler(this.ClrAll_Click);
-            // 
             // insertbtn
             // 
             this.insertbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -309,6 +309,7 @@
             this.MinimizeBox = false;
             this.Name = "Form6";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Details - Stock Database";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDtls)).EndInit();
             this.panel1.ResumeLayout(false);

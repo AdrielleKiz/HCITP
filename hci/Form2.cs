@@ -29,7 +29,7 @@ namespace hci
             cmd.ExecuteNonQuery();
             sqlCon.Close();
         }
-
+            
         private void Add()
         {
             string txtSQLQuery = "INSERT INTO UserInformation (FirstName,Lastname,EmailAddress,Address,PhoneNumber,UserName,Password) values ('" + this.txbxFirstN.Text + "','" + this.txbxLastN.Text + "','" + this.txbxEmail.Text + "','" + this.txbxAdd.Text + "','" + this.txbxNum.Text + "','" + this.txbxUname.Text + "','" + this.txbxPass.Text + "');";

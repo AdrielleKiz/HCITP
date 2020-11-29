@@ -291,6 +291,7 @@
             this.MinimizeBox = false;
             this.Name = "Form2";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp Form";
             this.ResumeLayout(false);
             this.PerformLayout();
