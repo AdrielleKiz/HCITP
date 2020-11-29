@@ -91,6 +91,11 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -131,6 +136,19 @@
     <None Include="Database.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="LogDBDataSet.xsc">
+      <DependentUpon>LogDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LogDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogDBDataSet.xss">
+      <DependentUpon>LogDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\hci.LogDBDataSetTableAdapters.ProductDetailsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\LogDBDataSet.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

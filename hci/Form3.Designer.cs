@@ -167,7 +167,9 @@
             this.MaximizeBox = false;
             this.Name = "Form3";
             this.ShowIcon = false;
-            this.Text = "Inventory Managing System: Main Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Stock Databse : Maim Menu";
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

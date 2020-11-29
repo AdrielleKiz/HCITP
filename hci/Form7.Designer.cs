@@ -133,6 +133,7 @@
             this.MinimizeBox = false;
             this.Name = "Form7";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees Record";
             ((System.ComponentModel.ISupportInitialize)(this.dgvemprecord)).EndInit();
             this.ResumeLayout(false);

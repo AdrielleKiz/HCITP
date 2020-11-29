@@ -33,5 +33,16 @@ namespace hci.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Ruki\\source\\repos\\Lo" +
+            "ginScreen\\LoginDb\\LogDB.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string LogDBConnectionString {
+            get {
+                return ((string)(this["LogDBConnectionString"]));
+            }
+        }
     }
 }
