@@ -183,12 +183,12 @@ namespace hci
 
         private void lnkSignup(object sender, EventArgs e)
         {
-            this.Visible = false;
-
-            Form2 signUp = new Form2();
-            signUp.Show();
-
+            \
         }
 
+        private void linkLblsignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

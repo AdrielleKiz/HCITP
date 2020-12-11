@@ -36,19 +36,22 @@
             this.cancelbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLblsignup = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // usertxtbox
             // 
-            this.usertxtbox.Location = new System.Drawing.Point(118, 120);
+            this.usertxtbox.Location = new System.Drawing.Point(115, 146);
             this.usertxtbox.Name = "usertxtbox";
             this.usertxtbox.Size = new System.Drawing.Size(211, 20);
             this.usertxtbox.TabIndex = 0;
             // 
             // passtxtbox
             // 
-            this.passtxtbox.Location = new System.Drawing.Point(117, 151);
+            this.passtxtbox.Location = new System.Drawing.Point(114, 177);
             this.passtxtbox.Name = "passtxtbox";
             this.passtxtbox.Size = new System.Drawing.Size(212, 20);
             this.passtxtbox.TabIndex = 1;
@@ -57,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 119);
+            this.label1.Location = new System.Drawing.Point(36, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 2;
@@ -68,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 150);
+            this.label2.Location = new System.Drawing.Point(36, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 3;
@@ -76,9 +79,11 @@
             // 
             // loginbtn
             // 
-            this.loginbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.loginbtn.BackColor = System.Drawing.Color.Beige;
+            this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.Location = new System.Drawing.Point(117, 183);
+            this.loginbtn.ForeColor = System.Drawing.Color.Black;
+            this.loginbtn.Location = new System.Drawing.Point(114, 209);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(75, 31);
             this.loginbtn.TabIndex = 4;
@@ -88,10 +93,12 @@
             // 
             // cancelbtn
             // 
-            this.cancelbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cancelbtn.BackColor = System.Drawing.Color.Beige;
             this.cancelbtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelbtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.Location = new System.Drawing.Point(254, 183);
+            this.cancelbtn.ForeColor = System.Drawing.Color.Black;
+            this.cancelbtn.Location = new System.Drawing.Point(251, 209);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(75, 31);
             this.cancelbtn.TabIndex = 5;
@@ -111,36 +118,51 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(90, 43);
+            this.label4.Location = new System.Drawing.Point(98, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(185, 23);
+            this.label4.Size = new System.Drawing.Size(239, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Inventory Managing System";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // linkLblsignup
+            // panel2
             // 
-            this.linkLblsignup.AutoSize = true;
-            this.linkLblsignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblsignup.LinkColor = System.Drawing.Color.Black;
-            this.linkLblsignup.Location = new System.Drawing.Point(181, 236);
-            this.linkLblsignup.Name = "linkLblsignup";
-            this.linkLblsignup.Size = new System.Drawing.Size(73, 15);
-            this.linkLblsignup.TabIndex = 9;
-            this.linkLblsignup.TabStop = true;
-            this.linkLblsignup.Text = "Signing up?";
-            this.linkLblsignup.Click += new System.EventHandler(this.lnkSignup);
-            this.linkLblsignup.Visible = false;
+            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(400, 63);
+            this.panel2.TabIndex = 32;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(517, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "User";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(517, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Date:";
             // 
             // Form1
             // 
             this.AcceptButton = this.loginbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.Wheat;
             this.CancelButton = this.cancelbtn;
             this.ClientSize = new System.Drawing.Size(400, 287);
-            this.Controls.Add(this.linkLblsignup);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cancelbtn);
@@ -156,6 +178,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,7 +195,9 @@
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLblsignup;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }
 

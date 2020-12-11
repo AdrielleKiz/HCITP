@@ -18,12 +18,12 @@ namespace hci
 
         private void Exit(object sender, EventArgs e)
         {
-            Close();
+            
         }
 
         private void ClrAllbtn_Click(object sender, EventArgs e)
         {
-            Clear();
+            
         }
 
         private void pnltlpdt_Paint(object sender, PaintEventArgs e)

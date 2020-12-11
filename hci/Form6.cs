@@ -26,10 +26,7 @@ namespace hci
 
         private void ClrAll_Click(object sender, EventArgs e)
         {
-            txtqntty.Clear();
-            txtboxsku.Clear();
-            txtboxUofM.Clear();
-            txtdsptn.Clear();
+            
         }
 
         private void insertbtn_Click(object sender, EventArgs e)
@@ -41,6 +38,31 @@ namespace hci
         {
             int rowindex = dgvOrderDtls.CurrentCell.RowIndex;
             dgvOrderDtls.Rows.RemoveAt(rowindex);
+        }
+
+        private void txtqntty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtboxsku_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtboxUofM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdsptn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUofM_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
