@@ -23,5 +23,18 @@ namespace hci
             Form3 Menu = new Form3();
             Menu.Show();
         }
+
+        private void User_Load(object sender, EventArgs e)
+        {
+            label2.Text = Form1.SetValueForText1;
+            label10.Text = Form1.Date;
+        }
+
+        private void dgvemprecord_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
     }
 }

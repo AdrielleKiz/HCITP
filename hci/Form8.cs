@@ -16,5 +16,22 @@ namespace hci
         {
             InitializeComponent();
         }
+
+        private void dgvprdtdtls_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void User_Load(object sender, EventArgs e)
+        {
+            label2.Text = Form1.SetValueForText1;
+            label10.Text = Form1.Date;
+        }
+        private void Back(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form6 Orderform = new Form6();
+            Orderform.Show();
+        }
     }
 }

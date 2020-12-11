@@ -15,6 +15,7 @@ namespace hci
     public partial class Form1 : Form
     {
         public static string SetValueForText1 = "";
+        public static string Date = "Date: " + DateTime.Now.ToString("dddd, dd MMMM yyyy");
         public static string user_id = "";
         //Added unique permissions
         public static string add_users;
@@ -36,6 +37,7 @@ namespace hci
         public static string delete_product;
         public static string allow_ordering_product;
         public static string allow_checkout;
+
 
 
         public Form1()
@@ -155,11 +157,21 @@ namespace hci
                     allow_ordering_product = alloworderingproduct;
                     allow_checkout = allowcheckout;
 
-                    SetValueForText1 = usertxtbox.Text;
                     this.Visible = false;
-                    Form3 mainMenu = new Form3();
-                    mainMenu.Show();
-                    MessageBox.Show("Login Successful");
+                    if (usertxtbox.Text.Trim() == "admin" && passtxtbox.Text.Trim() == "admin") {
+                        SetValueForText1 = usertxtbox.Text;
+                        Form3 mainMenu = new Form3();
+                        mainMenu.Show();
+                        MessageBox.Show("Admin Login Successful");
+                    }
+                    else
+                    {
+                        SetValueForText1 = usertxtbox.Text;
+                        Form6 Orderform = new Form6();
+                        Orderform.Show();
+                        MessageBox.Show("Login Successful");
+                    }
+                    
                 }
                 else
                 {
@@ -187,6 +199,11 @@ namespace hci
         }
 
         private void linkLblsignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

@@ -19,10 +19,46 @@ namespace hci
 
         private void Exit(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Form3 Menu = new Form3();
-            Menu.Show();
+            Application.Exit();
         }
+
+        private void ItemList(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form8 List = new Form8();
+            List.Show();
+        }
+       
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void ClrAll_Click(object sender, EventArgs e)
         {
@@ -68,6 +104,12 @@ namespace hci
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            label1.Text = Form1.SetValueForText1;
+            label10.Text = Form1.Date;
         }
     }
 }

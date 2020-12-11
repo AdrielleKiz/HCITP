@@ -36,6 +36,11 @@ namespace hci
             // TODO: This line of code loads data into the 'logDBDataSet.ProductDetails' table. You can move, or remove it, as needed.
             GetProductDetailsRecord();
 
+            
+            label8.Text = Form1.SetValueForText1;
+            label10.Text = Form1.Date;
+
+
         }
         private void GetProductDetailsRecord()
         {
@@ -240,6 +245,11 @@ namespace hci
                     }
                 }
             }
+        }
+
+        private void dgvprdtdtls_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvprdtdtls = new System.Windows.Forms.DataGridView();
@@ -71,10 +72,12 @@
             this.button2.TabIndex = 35;
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Back);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,6 +85,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(649, 75);
             this.panel2.TabIndex = 34;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(575, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 2;
             // 
             // label11
             // 
@@ -97,9 +108,8 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(517, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.Size = new System.Drawing.Size(164, 13);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Date:";
             // 
             // dgvprdtdtls
             // 
@@ -118,6 +128,7 @@
             this.dgvprdtdtls.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvprdtdtls.Size = new System.Drawing.Size(649, 356);
             this.dgvprdtdtls.TabIndex = 33;
+            this.dgvprdtdtls.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvprdtdtls_CellContentClick);
             // 
             // Column1
             // 
@@ -208,6 +219,7 @@
             this.Name = "Form8";
             this.ShowIcon = false;
             this.Text = "Product List";
+            this.Load += new System.EventHandler(this.User_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvprdtdtls)).EndInit();
@@ -234,5 +246,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
     }
 }

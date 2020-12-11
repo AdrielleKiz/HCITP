@@ -41,6 +41,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,6 +66,7 @@
             this.dgvemprecord.Name = "dgvemprecord";
             this.dgvemprecord.Size = new System.Drawing.Size(649, 394);
             this.dgvemprecord.TabIndex = 0;
+            this.dgvemprecord.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvemprecord_CellContentClick);
             // 
             // Column1
             // 
@@ -133,6 +135,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -140,6 +143,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(649, 75);
             this.panel2.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(570, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 2;
             // 
             // label11
             // 
@@ -155,9 +166,8 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(517, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.Size = new System.Drawing.Size(164, 13);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Date:";
             // 
             // button1
             // 
@@ -190,6 +200,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees Record";
+            this.Load += new System.EventHandler(this.User_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvemprecord)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -215,5 +226,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }

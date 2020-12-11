@@ -26,7 +26,8 @@ namespace hci
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            label1.Text = Form1.SetValueForText1;
+            label10.Text = Form1.Date;
         }
     }
 }

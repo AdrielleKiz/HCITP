@@ -102,7 +102,8 @@ namespace hci
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            label1.Text = Form1.SetValueForText1;
+            label10.Text = Form1.Date;
         }
     }
 }
