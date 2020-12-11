@@ -91,5 +91,10 @@ namespace hci
             
             this.label3.Text = "User: " + Form1.SetValueForText1 + "Perms: " + title;
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

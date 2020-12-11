@@ -29,16 +29,16 @@ namespace hci
             
         }
 
-        private void insertbtn_Click(object sender, EventArgs e)
-        {
-            dgvOrderDtls.Rows.Add(txtqntty.Text,txtboxsku.Text,txtboxUofM.Text,txtdsptn.Text);
-        }
+        //private void insertbtn_Click(object sender, EventArgs e)
+        //{
+        //    dgvOrderDtls.Rows.Add(txtqntty.Text,txtboxsku.Text,txtboxUofM.Text,txtdsptn.Text);
+        //}
 
-        private void dltbtn_Click(object sender, EventArgs e)
-        {
-            int rowindex = dgvOrderDtls.CurrentCell.RowIndex;
-            dgvOrderDtls.Rows.RemoveAt(rowindex);
-        }
+        //private void dltbtn_Click(object sender, EventArgs e)
+        //{
+        //    int rowindex = dgvOrderDtls.CurrentCell.RowIndex;
+        //    dgvOrderDtls.Rows.RemoveAt(rowindex);
+        //}
 
         private void txtqntty_TextChanged(object sender, EventArgs e)
         {
@@ -61,6 +61,11 @@ namespace hci
         }
 
         private void lblUofM_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -261,6 +261,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator Dashboard";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -277,16 +278,6 @@
         
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnDash;
-        private System.Windows.Forms.Button btnProductDeets;
-        private System.Windows.Forms.Button btnOrderDeets;
-        private System.Windows.Forms.Button btnEmployees;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.LinkLabel lnkLogout;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;

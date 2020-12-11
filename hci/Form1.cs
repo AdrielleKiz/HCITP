@@ -79,7 +79,7 @@ namespace hci
                     con.Open();
                     SQLiteCommand command = new SQLiteCommand();
                     command = con.CreateCommand();
-                    command.CommandText = "SELECT user_id FROM UserInformation WHERE UserName = '"+this.usertxtbox.Text+"';";
+                    command.CommandText = "SELECT UserID FROM UserInformation WHERE UserName = '"+this.usertxtbox.Text+"';";
                     SQLiteDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
@@ -183,7 +183,7 @@ namespace hci
 
         private void lnkSignup(object sender, EventArgs e)
         {
-            \
+            
         }
 
         private void linkLblsignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
