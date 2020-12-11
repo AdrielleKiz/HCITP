@@ -162,6 +162,7 @@
             this.button6.Text = "Exit";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.Exit);
             // 
             // button5
             // 
@@ -177,6 +178,7 @@
             this.button5.Text = "Change User";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Logout);
             // 
             // button4
             // 
@@ -192,6 +194,7 @@
             this.button4.Text = "Employee Management";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.EmpManagement);
             // 
             // button3
             // 
@@ -207,6 +210,7 @@
             this.button3.Text = "Order Management";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.OrderManagement);
             // 
             // button2
             // 
@@ -222,6 +226,7 @@
             this.button2.Text = "Sales";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Sales);
             // 
             // button1
             // 
@@ -237,6 +242,7 @@
             this.button1.Text = "Product Management";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ProductManagement);
             // 
             // Form3
             // 

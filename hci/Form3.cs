@@ -38,26 +38,34 @@ namespace hci
 
         }
 
-        private void OrderDeets(object sender, EventArgs e)
+        private void Sales(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form6 OrderDeets = new Form6();
-            OrderDeets.Show();
+            Form4 Salesform = new Form4();
+            Salesform.Show();
         }
 
-        private void ProductDeets(object sender, EventArgs e)
+        private void ProductManagement(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form5 ProductDeets = new Form5();
-            ProductDeets.Show();
+            Form5 Productform = new Form5();
+            Productform.Show();
 
         }
 
-        private void Emp(object sender, EventArgs e)
+        private void OrderManagement(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form7 Emp = new Form7();
-            Emp.Show();
+            Form6 Orderform = new Form6();
+            Orderform.Show();
+
+        }
+
+        private void EmpManagement(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form7 Empform = new Form7();
+            Empform.Show();
         }
 
         private void Exit(object sender, EventArgs e)

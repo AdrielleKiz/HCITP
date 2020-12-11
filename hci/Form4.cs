@@ -23,5 +23,10 @@ namespace hci
             Form3 Menu = new Form3();
             Menu.Show();
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
