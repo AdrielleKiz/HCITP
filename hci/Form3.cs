@@ -18,26 +18,6 @@ namespace hci
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dashboard(object sender, EventArgs e)
-        {
-            if (Form1.view_dash_menu == "0")
-            {
-                MessageBox.Show("You do not have sufficient permission to execute this action", "You cannot do this", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                this.Visible = false;
-                Form4 Dashboard = new Form4();
-                Dashboard.Show();
-            }
-
-        }
-
         private void Sales(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -78,26 +58,6 @@ namespace hci
             this.Visible = false;
             Form1 LoginPage = new Form1();
             LoginPage.Show();
-        }
-
-       private void Username(object sender, EventArgs e)
-        {
-            switch (Form1.view_dash_menu)
-            {
-                case"0":
-                title = "Employees";
-                break;
-
-                case"1":
-                title = "Administrator";
-                break;
-
-                case"3":
-                title = "Manager";
-                break;              
-            }
-            
-            this.label3.Text = "User: " + Form1.SetValueForText1 + "Perms: " + title;
         }
 
         private void Form3_Load(object sender, EventArgs e)
