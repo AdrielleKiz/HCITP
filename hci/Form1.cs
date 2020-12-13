@@ -16,6 +16,7 @@ namespace hci
     {
         public static string SetValueForText1 = "";
         public static string Date = "Date: " + DateTime.Now.ToString("dddd, dd MMMM yyyy");
+        public static string DateOrdered = DateTime.Now.ToString("MM/dd/yy");
         public static string user_id = "";
         //Added unique permissions
         public static string add_users;
@@ -204,6 +205,11 @@ namespace hci
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

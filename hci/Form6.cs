@@ -13,6 +13,7 @@ namespace hci
 {
     public partial class Form6 : Form
     {
+        private static string newVal;
         public Form6()
         {
             InitializeComponent();
@@ -37,7 +38,104 @@ namespace hci
             LoginPage.Show();
         }
 
+        private void AddOrder(object sender, EventArgs e)
+        {
+            if (txbxQuantity.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter Quantity");
+            }
+            else if (txbxQuantity.Text.Trim() != "")
+            {
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text));
+                }
+                else
+                {
+                    foreach (DataGridViewRow r in dataGridView1.Rows)
+                    {
+                        if (!(r.Cells["Column1"].Value.ToString() == txbxUserOrder.Text))
+                        {
+                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text));
+                        }
+                        else
+                        {
+                            foreach (DataGridViewRow r in dataGridView1.Rows)
+                            {
+                                if (r.Cells["Column1"].Value.ToString() == txbxUserOrder.Text)
+                                {
+                                    int qt = Convert.ToInt32(r.Cells["Column1"].Value.ToString() == txbxUserOrder.Text)
+                                    int qtt = Convert.ToInt32(txbxQuantity.Text) + qt;
+                                    int newVal = qtt.ToString();
 
+                                    for (int rowIndex = 0; rowIndex < dataGridView1.Rows.Count; rowIndex++)
+                                        for (int columnIndex = 0; columnIndex < dataGridView1.ColumnCount; columnIndex++)
+                                        {
+                                            if (dataGridView1[columnIndex, rowIndex].Value.ToString() == "PD1")
+                                            {
+                                                dataGridView1.Rows[rowIndex].Cells[4].Value = newVal;
+                                            }
+                                            else if (dataGridView1[columnIndex, rowIndex].Value.ToString() == "PD2")
+                                            {
+                                                dataGridView1.Rows[rowIndex].Cells[4].Value = newVal;
+                                            }
+                                            else if (dataGridView1[columnIndex, rowIndex].Value.ToString() == "PD3")
+                                            {
+                                                dataGridView1.Rows[rowIndex].Cells[4].Value = newVal;
+                                            }
+                                        }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+                
+            
+            
+        }
+
+        private void AddGrid(string Date, string SKU, string ItemName, string Var, int Quantity)
+        {
+            DataGridViewRow newRow = new DataGridViewRow();
+            newRow.CreateCells(dataGridView1);
+            newRow.Cells[0].Value = Date;
+            newRow.Cells[1].Value = SKU;
+            newRow.Cells[2].Value = ItemName;
+            newRow.Cells[3].Value = Var;
+            newRow.Cells[4].Value = Quantity;
+            dataGridView1.Rows.Add(newRow);
+        }
+
+        private void CheckoutGrid(string Date, string SKU, string ItemName, string Var, int Quantity)
+        {
+            DataGridViewRow newRow = new DataGridViewRow();
+            newRow.CreateCells(dataGridView1);
+            newRow.Cells[0].Value = Date;
+            newRow.Cells[1].Value = SKU;
+            newRow.Cells[2].Value = ItemName;
+            newRow.Cells[3].Value = Var;
+            newRow.Cells[4].Value = Quantity;
+            dataGridView1.Rows.Add(newRow);
+        }
+
+        private void DeleteOrder(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            {
+                if (MessageBox.Show("Removing Order. do you want to continue?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    dataGridView1.Rows.RemoveAt(item.Index);
+                }
+            }
+        }
+
+        private void CheckOut(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            
+        }
 
 
 
@@ -143,7 +241,7 @@ namespace hci
                     txbxSKU.Text = DR.GetString(DR.GetOrdinal("SKU"));
                     txbxItemName.Text = DR.GetString(DR.GetOrdinal("ItemName"));
                     txbxVariant.Text = DR.GetString(DR.GetOrdinal("Variant"));
-                    txbxQty.Text += DR["Quantity"].ToString();
+                    txbxQty.Text = DR["Quantity"].ToString();
 
                 }
                 DR.Close();
@@ -151,5 +249,6 @@ namespace hci
 
                 
         }
+
     }
 }
