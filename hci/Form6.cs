@@ -28,10 +28,15 @@ namespace hci
             Form8 List = new Form8();
             List.Show();
         }
-       
+
+        private void Logout(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form1 LoginPage = new Form1();
+            LoginPage.Show();
+        }
 
 
-       
 
 
 
