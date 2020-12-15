@@ -13,7 +13,6 @@ namespace hci
 {
     public partial class Form6 : Form
     {
-        private static string newVal;
         public Form6()
         {
             InitializeComponent();
@@ -44,59 +43,341 @@ namespace hci
             {
                 MessageBox.Show("Enter Quantity");
             }
-            else if (txbxQuantity.Text.Trim() != "")
+            else
             {
                 if (dataGridView1.Rows.Count == 0)
                 {
-                    AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text));
+
+                    int A = Convert.ToInt32(txbxQuantity.Text);
+                    int B = Convert.ToInt32(txbxQty.Text);
+                    int C = B - A;
+                    AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                    clear();
                 }
-                else
+                else if (dataGridView1.Rows.Count < 2)
                 {
-                    foreach (DataGridViewRow r in dataGridView1.Rows)
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     {
-                        if (!(r.Cells["Column1"].Value.ToString() == txbxUserOrder.Text))
+                        if (txbxUserOrder.Text == "Product 1")
                         {
-                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text));
+                            if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                            {
+                                int index = -1;
+
+                                DataGridViewRow row = dataGridView1.Rows
+                                    .Cast<DataGridViewRow>()
+                                    .Where(r => r.Cells[2].Value.ToString().Equals("Product 1"))
+                                    .First();
+
+                                index = row.Index;
+
+                                int qt = Convert.ToInt32(dataGridView1.Rows[index].Cells[4].Value);
+                                int qtt = Convert.ToInt32(txbxQuantity.Text) + qt;
+                                string newVal = qtt.ToString();
+                                dataGridView1.Rows[index].Cells[4].Value = newVal;
+                            }
+                            else
+                            {
+                                int A = Convert.ToInt32(txbxQuantity.Text);
+                                int B = Convert.ToInt32(txbxQty.Text);
+                                int C = B - A;
+                                AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                                clear();
+                                break;
+                            }
+                        }
+                        else if (txbxUserOrder.Text == "Product 2")
+                        {
+                            if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                            {
+                                int index = -1;
+
+                                DataGridViewRow row = dataGridView1.Rows
+                                    .Cast<DataGridViewRow>()
+                                    .Where(r => r.Cells[2].Value.ToString().Equals("Product 2"))
+                                    .First();
+
+                                index = row.Index;
+
+                                int qt = Convert.ToInt32(dataGridView1.Rows[index].Cells[4].Value);
+                                int qtt = Convert.ToInt32(txbxQuantity.Text) + qt;
+                                string newVal = qtt.ToString();
+                                dataGridView1.Rows[index].Cells[4].Value = newVal;
+                            }
+                            else
+                            {
+                                int A = Convert.ToInt32(txbxQuantity.Text);
+                                int B = Convert.ToInt32(txbxQty.Text);
+                                int C = B - A;
+                                AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                                clear();
+                                break;
+                            }
+                        }
+                        else if (txbxUserOrder.Text == "Product 3")
+                        {
+                            if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                            {
+                                int index = -1;
+
+                                DataGridViewRow row = dataGridView1.Rows
+                                    .Cast<DataGridViewRow>()
+                                    .Where(r => r.Cells[2].Value.ToString().Equals("Product 3"))
+                                    .First();
+
+                                index = row.Index;
+
+                                int qt = Convert.ToInt32(dataGridView1.Rows[index].Cells[4].Value);
+                                int qtt = Convert.ToInt32(txbxQuantity.Text) + qt;
+                                string newVal = qtt.ToString();
+                                dataGridView1.Rows[index].Cells[4].Value = newVal;
+                            }
+                            else
+                            {
+                                int A = Convert.ToInt32(txbxQuantity.Text);
+                                int B = Convert.ToInt32(txbxQty.Text);
+                                int C = B - A;
+                                AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                                clear();
+                                break;
+                            }
                         }
                         else
                         {
-                            foreach (DataGridViewRow r in dataGridView1.Rows)
-                            {
-                                if (r.Cells["Column1"].Value.ToString() == txbxUserOrder.Text)
-                                {
-                                    int qt = Convert.ToInt32(r.Cells["Column1"].Value.ToString() == txbxUserOrder.Text)
-                                    int qtt = Convert.ToInt32(txbxQuantity.Text) + qt;
-                                    int newVal = qtt.ToString();
-
-                                    for (int rowIndex = 0; rowIndex < dataGridView1.Rows.Count; rowIndex++)
-                                        for (int columnIndex = 0; columnIndex < dataGridView1.ColumnCount; columnIndex++)
-                                        {
-                                            if (dataGridView1[columnIndex, rowIndex].Value.ToString() == "PD1")
-                                            {
-                                                dataGridView1.Rows[rowIndex].Cells[4].Value = newVal;
-                                            }
-                                            else if (dataGridView1[columnIndex, rowIndex].Value.ToString() == "PD2")
-                                            {
-                                                dataGridView1.Rows[rowIndex].Cells[4].Value = newVal;
-                                            }
-                                            else if (dataGridView1[columnIndex, rowIndex].Value.ToString() == "PD3")
-                                            {
-                                                dataGridView1.Rows[rowIndex].Cells[4].Value = newVal;
-                                            }
-                                        }
-                                }
-                            }
+                            int A = Convert.ToInt32(txbxQuantity.Text);
+                            int B = Convert.ToInt32(txbxQty.Text);
+                            int C = B - A;
+                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                            clear();
                         }
                     }
                 }
-            }
-            
-                
-            
-            
+                else if (dataGridView1.Rows.Count < 3)
+                {
+                    if (txbxUserOrder.Text == "Product 1")
+                    {
+                        if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[1].Cells[2].Value.ToString().Equals("Product 1"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[1].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[0].Cells[2].Value.ToString().Equals("Product 1"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[0].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else
+                        {
+                            int A = Convert.ToInt32(txbxQuantity.Text);
+                            int B = Convert.ToInt32(txbxQty.Text);
+                            int C = B - A;
+                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                            clear();
+                        }
+                    }
+                    else if (txbxUserOrder.Text == "Product 2")
+                    {
+                        if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[1].Cells[2].Value.ToString().Equals("Product 2"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[1].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[0].Cells[2].Value.ToString().Equals("Product 2"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[0].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else
+                        {
+                            int A = Convert.ToInt32(txbxQuantity.Text);
+                            int B = Convert.ToInt32(txbxQty.Text);
+                            int C = B - A;
+                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                            clear();
+                        }
+                    }
+                    else if (txbxUserOrder.Text == "Product 3")
+                    {
+                        if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[1].Cells[2].Value.ToString().Equals("Product 3"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[1].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[0].Cells[2].Value.ToString().Equals("Product 3"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[0].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else
+                        {
+                            int A = Convert.ToInt32(txbxQuantity.Text);
+                            int B = Convert.ToInt32(txbxQty.Text);
+                            int C = B - A;
+                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                            clear();
+                        }
+                    }
+                }
+                else if (dataGridView1.Rows.Count < 4)
+                {
+                    if (txbxUserOrder.Text == "Product 1")
+                    {
+                        if (txbxUserOrder.Text == dataGridView1.Rows[2].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[2].Cells[2].Value.ToString().Equals("Product 1"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[1].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[2].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[0].Cells[2].Value.ToString().Equals("Product 1"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[1].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
+                        {string query = "UPDATE ProductDetails SET Quantity = @Column2" + this.dataGridView1.Columns["Quantity"];
+                            if (dataGridView1.Rows[1].Cells[2].Value.ToString().Equals("Product 1"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[1].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else
+                        {
+                            int A = Convert.ToInt32(txbxQuantity.Text);
+                            int B = Convert.ToInt32(txbxQty.Text);
+                            int C = B - A;
+                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                            clear();
+                        }
+                    }
+                    else if (txbxUserOrder.Text == "Product 2")
+                    {
+                        if (txbxUserOrder.Text == dataGridView1.Rows[2].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[2].Cells[2].Value.ToString().Equals("Product 2"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[2].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[2].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[0].Cells[2].Value.ToString().Equals("Product 2"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[0].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[1].Cells[2].Value.ToString().Equals("Product 2"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[1].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else
+                        {
+                            int A = Convert.ToInt32(txbxQuantity.Text);
+                            int B = Convert.ToInt32(txbxQty.Text);
+                            int C = B - A;
+                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                            clear();
+                        }
+                    }
+                    else if (txbxUserOrder.Text == "Product 3")
+                    {
+                        if (txbxUserOrder.Text == dataGridView1.Rows[2].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[2].Cells[2].Value.ToString().Equals("Product 3"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[2].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[2].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[0].Cells[2].Value.ToString().Equals("Product 3"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[0].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
+                        {
+                            if (dataGridView1.Rows[1].Cells[2].Value.ToString().Equals("Product 3"))
+                            {
+                                int qt1 = Convert.ToInt32(dataGridView1.Rows[1].Cells[4].Value.ToString());
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int newVal1 = qt1 + qtt1;
+                                dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                            }
+                        }
+                        else
+                        {
+                            int A = Convert.ToInt32(txbxQuantity.Text);
+                            int B = Convert.ToInt32(txbxQty.Text);
+                            int C = B - A;
+                            AddGrid(Form1.DateOrdered, txbxSKU.Text, txbxItemName.Text, txbxVariant.Text, Convert.ToInt32(txbxQuantity.Text), C);
+                            clear();
+                        }
+                    }
+                }
+            } 
         }
 
-        private void AddGrid(string Date, string SKU, string ItemName, string Var, int Quantity)
+        private void AddGrid(string Date, string SKU, string ItemName, string Var, int Quantity, int Stock)
         {
             DataGridViewRow newRow = new DataGridViewRow();
             newRow.CreateCells(dataGridView1);
@@ -105,18 +386,7 @@ namespace hci
             newRow.Cells[2].Value = ItemName;
             newRow.Cells[3].Value = Var;
             newRow.Cells[4].Value = Quantity;
-            dataGridView1.Rows.Add(newRow);
-        }
-
-        private void CheckoutGrid(string Date, string SKU, string ItemName, string Var, int Quantity)
-        {
-            DataGridViewRow newRow = new DataGridViewRow();
-            newRow.CreateCells(dataGridView1);
-            newRow.Cells[0].Value = Date;
-            newRow.Cells[1].Value = SKU;
-            newRow.Cells[2].Value = ItemName;
-            newRow.Cells[3].Value = Var;
-            newRow.Cells[4].Value = Quantity;
+            newRow.Cells[5].Value = Stock;
             dataGridView1.Rows.Add(newRow);
         }
 
@@ -129,80 +399,6 @@ namespace hci
                     dataGridView1.Rows.RemoveAt(item.Index);
                 }
             }
-        }
-
-        private void CheckOut(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
-            
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void ClrAll_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        //private void insertbtn_Click(object sender, EventArgs e)
-        //{
-        //    dgvOrderDtls.Rows.Add(txtqntty.Text,txtboxsku.Text,txtboxUofM.Text,txtdsptn.Text);
-        //}
-
-        //private void dltbtn_Click(object sender, EventArgs e)
-        //{
-        //    int rowindex = dgvOrderDtls.CurrentCell.RowIndex;
-        //    dgvOrderDtls.Rows.RemoveAt(rowindex);
-        //}
-
-        private void txtqntty_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtboxsku_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtboxUofM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtdsptn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUofM_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -228,26 +424,260 @@ namespace hci
             DA.Fill(DT);
             //SQLiteDataReader R = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
-            if (DT.Rows.Count > 0)
+            if (this.txbxUserOrder.Text.Length > 3)
             {
-                SQLiteConnection con = new SQLiteConnection(@"Data Source=Database.db ;Version=3;");
-                con.Open();
-                SQLiteCommand command = new SQLiteCommand();
-                command = con.CreateCommand();
-                command.CommandText = "SELECT * FROM ProductDetails WHERE ItemName = '" + this.txbxUserOrder.Text + "';";
-                SQLiteDataReader DR = command.ExecuteReader();
-                while (DR.Read())
+                if (DT.Rows.Count > 0)
                 {
-                    txbxSKU.Text = DR.GetString(DR.GetOrdinal("SKU"));
-                    txbxItemName.Text = DR.GetString(DR.GetOrdinal("ItemName"));
-                    txbxVariant.Text = DR.GetString(DR.GetOrdinal("Variant"));
-                    txbxQty.Text = DR["Quantity"].ToString();
+                    SQLiteConnection con = new SQLiteConnection(@"Data Source=Database.db ;Version=3;");
+                    con.Open();
+                    SQLiteCommand command = new SQLiteCommand();
+                    command = con.CreateCommand();
+                    command.CommandText = "SELECT * FROM ProductDetails WHERE ItemName = '" + this.txbxUserOrder.Text + "';";
+                    SQLiteDataReader DR = command.ExecuteReader();
 
+                    while (DR.Read())
+                    {
+                        txbxSKU.Text = DR.GetString(DR.GetOrdinal("SKU"));
+                        txbxItemName.Text = DR.GetString(DR.GetOrdinal("ItemName"));
+                        txbxVariant.Text = DR.GetString(DR.GetOrdinal("Variant"));
+                        txbxQty.Text = DR["Quantity"].ToString();
+
+                        
+                    }
+                    DR.Close();
                 }
-                DR.Close();
             }
-
+            else if (this.txbxUserOrder.Text.Length < 4)
+            {
                 
+                SQLiteConnection con2 = new SQLiteConnection(@"Data Source=Database.db ;Version=3;");
+                con2.Open();
+                SQLiteCommand command2 = new SQLiteCommand();
+                command2 = con2.CreateCommand();
+                command2.CommandText = "SELECT * FROM ProductDetails WHERE SKU = '" + this.txbxUserOrder.Text + "';";
+                SQLiteDataReader DR2 = command2.ExecuteReader();
+
+                    while (DR2.Read())
+                    {
+                        txbxSKU.Text = DR2.GetString(DR2.GetOrdinal("SKU"));
+                        txbxItemName.Text = DR2.GetString(DR2.GetOrdinal("ItemName"));
+                        txbxVariant.Text = DR2.GetString(DR2.GetOrdinal("Variant"));
+                        txbxQty.Text = DR2["Quantity"].ToString();
+                    }
+                    DR2.Close();
+            }
+        }
+
+        private void CheckOut(object sender, EventArgs e)
+        {
+            string pd1 = "Product 1";
+            string pd2 = "Product 2";
+            string pd3 = "Product 3";
+            string query = "UPDATE ProductDetails SET Quantity = :qty WHERE ItemName = :name";
+            SQLiteConnection Con = new SQLiteConnection("Data Source=Database.db;Version=3;");
+            Con.Open();
+            SQLiteCommand cmd = new SQLiteCommand(Con);
+            SQLiteCommand cmd2 = new SQLiteCommand(Con);
+            cmd.CommandText = query;
+            if (dataGridView1.Rows.Count < 2)
+            {
+                if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd1)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 1");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+                    
+                    cmd.ExecuteNonQuery();
+                }
+                else if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd2)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 2");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+
+                    cmd.ExecuteNonQuery();
+                }
+                else if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd3)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 3");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+            }
+            else if (dataGridView1.Rows.Count < 3)
+            {
+                if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd1)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 1");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+                    cmd.ExecuteNonQuery();
+
+                    if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd2)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 2");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+                    else if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd3)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 3");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                else if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd2)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 2");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+                    cmd.ExecuteNonQuery();
+
+                    if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd1)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 1");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+                    else if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd3)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 3");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                else if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd3)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 3");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+                    cmd.ExecuteNonQuery();
+
+                    if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd1)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 1");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+                    else if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd2)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 2");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            else if (dataGridView1.Rows.Count < 4)
+            {
+                if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd1)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 1");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+                    cmd.ExecuteNonQuery();
+
+                    if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd2)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 2");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+
+                        if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd3)
+                        {
+                            cmd.Parameters.AddWithValue("name", "Product 3");
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    else if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd3)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 3");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+
+                        if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd2)
+                        {
+                            cmd.Parameters.AddWithValue("name", "Product 2");
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                else if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd2)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 2");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+                    cmd.ExecuteNonQuery();
+
+                    if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd1)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 1");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+
+                        if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd3)
+                        {
+                            cmd.Parameters.AddWithValue("name", "Product 3");
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    else if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd3)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 3");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+
+                        if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd1)
+                        {
+                            cmd.Parameters.AddWithValue("name", "Product 1");
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                else if (dataGridView1.Rows[0].Cells["Column1"].Value.ToString() == pd3)
+                {
+                    cmd.Parameters.AddWithValue("name", "Product 3");
+                    cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[0].Cells["Stock"].Value);
+                    cmd.ExecuteNonQuery();
+
+                    if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd1)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 1");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+
+                        if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd2)
+                        {
+                            cmd.Parameters.AddWithValue("name", "Product 2");
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    else if (dataGridView1.Rows[1].Cells["Column1"].Value.ToString() == pd2)
+                    {
+                        cmd.Parameters.AddWithValue("name", "Product 2");
+                        cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                        cmd.ExecuteNonQuery();
+
+                        if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd1)
+                        {
+                            cmd.Parameters.AddWithValue("name", "Product 1");
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            dataGridView1.Rows.Clear();
+
+        }
+
+        public void clear()
+        {
+            txbxItemName.Clear();
+            txbxQty.Clear();
+            txbxQuantity.Clear();
+            txbxSKU.Clear();
+            txbxUserOrder.Clear();
+            txbxVariant.Clear();
         }
 
     }

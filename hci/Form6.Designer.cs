@@ -231,7 +231,8 @@ namespace hci
             this.Column6,
             this.Column1,
             this.Column3,
-            this.Column2});
+            this.Column2,
+            this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(1, 168);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(648, 175);
@@ -264,7 +265,8 @@ namespace hci
             // 
             // Column4
             // 
-            this.Column4.Name = "Column4";
+            this.Column4.Name = "Stock";
+            this.Column4.Visible = false;
             // 
             // pictureBox4
             // 

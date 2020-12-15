@@ -108,27 +108,27 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(517, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(164, 13);
+            this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 0;
             // 
             // dgvprdtdtls
             // 
+            this.dgvprdtdtls.AllowUserToAddRows = false;
+            this.dgvprdtdtls.AllowUserToDeleteRows = false;
+            this.dgvprdtdtls.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvprdtdtls.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvprdtdtls.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.Column5});
             this.dgvprdtdtls.Location = new System.Drawing.Point(0, 127);
             this.dgvprdtdtls.Name = "dgvprdtdtls";
             this.dgvprdtdtls.ReadOnly = true;
             this.dgvprdtdtls.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvprdtdtls.Size = new System.Drawing.Size(649, 356);
             this.dgvprdtdtls.TabIndex = 33;
-            this.dgvprdtdtls.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvprdtdtls_CellContentClick);
             // 
             // Column1
             // 
@@ -150,27 +150,23 @@
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "SKU";
+            this.Column4.HeaderText = "Variant";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Variant";
+            this.Column5.HeaderText = "Description";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Description";
             this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Stocks";
             this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             // 
             // button1
             // 
