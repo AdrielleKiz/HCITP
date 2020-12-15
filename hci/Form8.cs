@@ -59,9 +59,7 @@ namespace hci
 
         private void Back(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Form6 Orderform = new Form6();
-            Orderform.Show();
+            this.Close();
         }
     }
 }

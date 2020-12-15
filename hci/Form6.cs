@@ -25,7 +25,6 @@ namespace hci
 
         private void ItemList(object sender, EventArgs e)
         {
-            this.Visible = false;
             Form8 List = new Form8();
             List.Show();
         }
@@ -75,6 +74,12 @@ namespace hci
                                 int qtt = Convert.ToInt32(txbxQuantity.Text) + qt;
                                 string newVal = qtt.ToString();
                                 dataGridView1.Rows[index].Cells[4].Value = newVal;
+
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                             else
                             {
@@ -103,6 +108,11 @@ namespace hci
                                 int qtt = Convert.ToInt32(txbxQuantity.Text) + qt;
                                 string newVal = qtt.ToString();
                                 dataGridView1.Rows[index].Cells[4].Value = newVal;
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                             else
                             {
@@ -131,6 +141,11 @@ namespace hci
                                 int qtt = Convert.ToInt32(txbxQuantity.Text) + qt;
                                 string newVal = qtt.ToString();
                                 dataGridView1.Rows[index].Cells[4].Value = newVal;
+                                int qtt1 = Convert.ToInt32(txbxQuantity.Text);
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                             else
                             {
@@ -164,6 +179,11 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                                
+                                int stk = Convert.ToInt32(dataGridView1.Rows[1].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[1].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
@@ -174,6 +194,11 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                                
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else
@@ -195,6 +220,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[1].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[1].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
@@ -205,6 +234,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else
@@ -226,6 +259,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[1].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[1].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
@@ -236,6 +273,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else
@@ -260,6 +301,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[2].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[2].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[2].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
@@ -270,6 +315,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
@@ -280,6 +329,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[1].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[1].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else
@@ -301,6 +354,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[2].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[2].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[2].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
@@ -311,6 +368,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
@@ -321,6 +382,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[1].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[1].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else
@@ -342,6 +407,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[2].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[2].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[2].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[0].Cells[2].Value.ToString())
@@ -352,6 +421,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[0].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[0].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else if (txbxUserOrder.Text == dataGridView1.Rows[1].Cells[2].Value.ToString())
@@ -362,6 +435,10 @@ namespace hci
                                 int qtt1 = Convert.ToInt32(txbxQuantity.Text);
                                 int newVal1 = qt1 + qtt1;
                                 dataGridView1.Rows[1].Cells[4].Value = newVal1.ToString();
+                                int stk = Convert.ToInt32(dataGridView1.Rows[1].Cells[5].Value);
+                                int newStk = stk - qtt1;
+                                dataGridView1.Rows[1].Cells[5].Value = newStk;
+                                clear();
                             }
                         }
                         else
@@ -447,25 +524,30 @@ namespace hci
                     DR.Close();
                 }
             }
-            else if (this.txbxUserOrder.Text.Length < 4)
-            {
+            //
+            //
+            //          FAULTY CODE. BUT KEEP IT, JUST IN CASE
+            //
+            //
+            //else if (this.txbxUserOrder.Text.Length < 4)
+            //{
                 
-                SQLiteConnection con2 = new SQLiteConnection(@"Data Source=Database.db ;Version=3;");
-                con2.Open();
-                SQLiteCommand command2 = new SQLiteCommand();
-                command2 = con2.CreateCommand();
-                command2.CommandText = "SELECT * FROM ProductDetails WHERE SKU = '" + this.txbxUserOrder.Text + "';";
-                SQLiteDataReader DR2 = command2.ExecuteReader();
+            //    SQLiteConnection con2 = new SQLiteConnection(@"Data Source=Database.db ;Version=3;");
+            //    con2.Open();
+            //    SQLiteCommand command2 = new SQLiteCommand();
+            //    command2 = con2.CreateCommand();
+            //    command2.CommandText = "SELECT * FROM ProductDetails WHERE SKU = '" + this.txbxUserOrder.Text + "';";
+            //    SQLiteDataReader DR2 = command2.ExecuteReader();
 
-                    while (DR2.Read())
-                    {
-                        txbxSKU.Text = DR2.GetString(DR2.GetOrdinal("SKU"));
-                        txbxItemName.Text = DR2.GetString(DR2.GetOrdinal("ItemName"));
-                        txbxVariant.Text = DR2.GetString(DR2.GetOrdinal("Variant"));
-                        txbxQty.Text = DR2["Quantity"].ToString();
-                    }
-                    DR2.Close();
-            }
+            //        while (DR2.Read())
+            //        {
+            //            txbxSKU.Text = DR2.GetString(DR2.GetOrdinal("SKU"));
+            //            txbxItemName.Text = DR2.GetString(DR2.GetOrdinal("ItemName"));
+            //            txbxVariant.Text = DR2.GetString(DR2.GetOrdinal("Variant"));
+            //            txbxQty.Text = DR2["Quantity"].ToString();
+            //        }
+            //        DR2.Close();
+            //}
         }
 
         private void CheckOut(object sender, EventArgs e)
@@ -477,7 +559,6 @@ namespace hci
             SQLiteConnection Con = new SQLiteConnection("Data Source=Database.db;Version=3;");
             Con.Open();
             SQLiteCommand cmd = new SQLiteCommand(Con);
-            SQLiteCommand cmd2 = new SQLiteCommand(Con);
             cmd.CommandText = query;
             if (dataGridView1.Rows.Count < 2)
             {
@@ -581,7 +662,7 @@ namespace hci
                         if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd3)
                         {
                             cmd.Parameters.AddWithValue("name", "Product 3");
-                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[2].Cells["Stock"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -594,7 +675,7 @@ namespace hci
                         if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd2)
                         {
                             cmd.Parameters.AddWithValue("name", "Product 2");
-                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[2].Cells["Stock"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -614,7 +695,7 @@ namespace hci
                         if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd3)
                         {
                             cmd.Parameters.AddWithValue("name", "Product 3");
-                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[2].Cells["Stock"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -627,7 +708,7 @@ namespace hci
                         if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd1)
                         {
                             cmd.Parameters.AddWithValue("name", "Product 1");
-                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[2].Cells["Stock"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -647,7 +728,7 @@ namespace hci
                         if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd2)
                         {
                             cmd.Parameters.AddWithValue("name", "Product 2");
-                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[2].Cells["Stock"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -660,7 +741,7 @@ namespace hci
                         if (dataGridView1.Rows[2].Cells["Column1"].Value.ToString() == pd1)
                         {
                             cmd.Parameters.AddWithValue("name", "Product 1");
-                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[1].Cells["Stock"].Value);
+                            cmd.Parameters.AddWithValue("qty", dataGridView1.Rows[2].Cells["Stock"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
