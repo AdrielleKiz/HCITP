@@ -73,6 +73,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 13);
             this.label11.TabIndex = 1;
+            //this.label11.Text = "User: " + Form1.nameuser; temporarily removed while on development
             this.label11.Text = "User: ";
             // 
             // label10

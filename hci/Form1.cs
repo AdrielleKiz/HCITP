@@ -38,6 +38,7 @@ namespace hci
         public static string delete_product;
         public static string allow_ordering_product;
         public static string allow_checkout;
+        public static string nameuser;
 
 
 
@@ -89,6 +90,7 @@ namespace hci
                             userid = reader.GetValue(0).ToString();
                         }
                     user_id = userid;
+                    nameuser = this.usertxtbox.Text.Trim();
                     //end of query
                     
                     //retrieve permissions
