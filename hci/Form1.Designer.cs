@@ -44,25 +44,28 @@
             // 
             // usertxtbox
             // 
-            this.usertxtbox.Location = new System.Drawing.Point(115, 146);
+            this.usertxtbox.Location = new System.Drawing.Point(153, 180);
+            this.usertxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usertxtbox.Name = "usertxtbox";
-            this.usertxtbox.Size = new System.Drawing.Size(211, 20);
+            this.usertxtbox.Size = new System.Drawing.Size(280, 22);
             this.usertxtbox.TabIndex = 0;
             // 
             // passtxtbox
             // 
-            this.passtxtbox.Location = new System.Drawing.Point(114, 177);
+            this.passtxtbox.Location = new System.Drawing.Point(152, 218);
+            this.passtxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.passtxtbox.Name = "passtxtbox";
-            this.passtxtbox.Size = new System.Drawing.Size(212, 20);
+            this.passtxtbox.Size = new System.Drawing.Size(281, 22);
             this.passtxtbox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 145);
+            this.label1.Location = new System.Drawing.Point(48, 178);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.Size = new System.Drawing.Size(94, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -71,9 +74,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 176);
+            this.label2.Location = new System.Drawing.Point(48, 217);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 19);
+            this.label2.Size = new System.Drawing.Size(94, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
@@ -83,9 +87,10 @@
             this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginbtn.ForeColor = System.Drawing.Color.Black;
-            this.loginbtn.Location = new System.Drawing.Point(114, 209);
+            this.loginbtn.Location = new System.Drawing.Point(152, 257);
+            this.loginbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(75, 31);
+            this.loginbtn.Size = new System.Drawing.Size(100, 38);
             this.loginbtn.TabIndex = 4;
             this.loginbtn.Text = "Login";
             this.loginbtn.UseVisualStyleBackColor = false;
@@ -98,9 +103,10 @@
             this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelbtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelbtn.ForeColor = System.Drawing.Color.Black;
-            this.cancelbtn.Location = new System.Drawing.Point(251, 209);
+            this.cancelbtn.Location = new System.Drawing.Point(335, 257);
+            this.cancelbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(75, 31);
+            this.cancelbtn.Size = new System.Drawing.Size(100, 38);
             this.cancelbtn.TabIndex = 5;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = false;
@@ -109,18 +115,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 66);
+            this.label3.Location = new System.Drawing.Point(172, 81);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(0, 17);
             this.label3.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(98, 96);
+            this.label4.Location = new System.Drawing.Point(131, 118);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 23);
+            this.label4.Size = new System.Drawing.Size(317, 31);
             this.label4.TabIndex = 8;
             this.label4.Text = "Inventory Managing System";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -132,36 +140,39 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 63);
+            this.panel2.Size = new System.Drawing.Size(533, 78);
             this.panel2.TabIndex = 32;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(517, 47);
+            this.label11.Location = new System.Drawing.Point(689, 58);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.Size = new System.Drawing.Size(38, 17);
             this.label11.TabIndex = 1;
             this.label11.Text = "User";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(517, 18);
+            this.label10.Location = new System.Drawing.Point(689, 22);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(164, 13);
+            this.label10.Size = new System.Drawing.Size(218, 17);
             this.label10.TabIndex = 0;
             this.label10.Text = "Date : Friday, 11 December 2020";
             // 
             // Form1
             // 
             this.AcceptButton = this.loginbtn;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.CancelButton = this.cancelbtn;
-            this.ClientSize = new System.Drawing.Size(400, 287);
+            this.ClientSize = new System.Drawing.Size(533, 353);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -171,7 +182,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passtxtbox);
             this.Controls.Add(this.usertxtbox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
