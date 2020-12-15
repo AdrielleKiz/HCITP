@@ -35,14 +35,14 @@ namespace hci
             this.vcdbtn = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txbxQuantity = new System.Windows.Forms.TextBox();
+            this.txbxUserOrder = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbxStocks = new System.Windows.Forms.TextBox();
+            this.txbxQty = new System.Windows.Forms.TextBox();
+            this.txbxVariant = new System.Windows.Forms.TextBox();
+            this.txbxItemName = new System.Windows.Forms.TextBox();
+            this.txbxSKU = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,10 +62,10 @@ namespace hci
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -118,23 +118,24 @@ namespace hci
             this.button1.Text = "Add Order";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox7
+            // txbxQuantity
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(569, 356);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(60, 30);
-            this.textBox7.TabIndex = 48;
+            this.txbxQuantity.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxQuantity.Location = new System.Drawing.Point(569, 356);
+            this.txbxQuantity.Multiline = true;
+            this.txbxQuantity.Name = "txbxQuantity";
+            this.txbxQuantity.Size = new System.Drawing.Size(60, 30);
+            this.txbxQuantity.TabIndex = 48;
             // 
-            // textBox6
+            // txbxUserOrder
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(373, 356);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(191, 29);
-            this.textBox6.TabIndex = 47;
+            this.txbxUserOrder.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxUserOrder.Location = new System.Drawing.Point(373, 356);
+            this.txbxUserOrder.Multiline = true;
+            this.txbxUserOrder.Name = "txbxUserOrder";
+            this.txbxUserOrder.Size = new System.Drawing.Size(191, 29);
+            this.txbxUserOrder.TabIndex = 47;
+            this.txbxUserOrder.TextChanged += new System.EventHandler(this.txbxUserOrder_TextChanged);
             // 
             // label9
             // 
@@ -148,45 +149,45 @@ namespace hci
             this.label9.TabIndex = 46;
             this.label9.Text = "Quantity";
             // 
-            // textBox5
+            // txbxStocks
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(86, 462);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(185, 21);
-            this.textBox5.TabIndex = 45;
+            this.txbxStocks.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxStocks.Location = new System.Drawing.Point(86, 462);
+            this.txbxStocks.Name = "txbxStocks";
+            this.txbxStocks.Size = new System.Drawing.Size(185, 21);
+            this.txbxStocks.TabIndex = 45;
             // 
-            // textBox4
+            // txbxQty
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(86, 436);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 21);
-            this.textBox4.TabIndex = 44;
+            this.txbxQty.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxQty.Location = new System.Drawing.Point(86, 436);
+            this.txbxQty.Name = "txbxQty";
+            this.txbxQty.Size = new System.Drawing.Size(185, 21);
+            this.txbxQty.TabIndex = 44;
             // 
-            // textBox3
+            // txbxVariant
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(86, 410);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 21);
-            this.textBox3.TabIndex = 43;
+            this.txbxVariant.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxVariant.Location = new System.Drawing.Point(86, 410);
+            this.txbxVariant.Name = "txbxVariant";
+            this.txbxVariant.Size = new System.Drawing.Size(185, 21);
+            this.txbxVariant.TabIndex = 43;
             // 
-            // textBox2
+            // txbxItemName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(86, 384);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 21);
-            this.textBox2.TabIndex = 42;
+            this.txbxItemName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxItemName.Location = new System.Drawing.Point(86, 384);
+            this.txbxItemName.Name = "txbxItemName";
+            this.txbxItemName.Size = new System.Drawing.Size(185, 21);
+            this.txbxItemName.TabIndex = 42;
             // 
-            // textBox1
+            // txbxSKU
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(86, 358);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 21);
-            this.textBox1.TabIndex = 41;
+            this.txbxSKU.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxSKU.Location = new System.Drawing.Point(86, 358);
+            this.txbxSKU.Name = "txbxSKU";
+            this.txbxSKU.Size = new System.Drawing.Size(185, 21);
+            this.txbxSKU.TabIndex = 41;
             // 
             // label8
             // 
@@ -378,6 +379,14 @@ namespace hci
             this.panel2.TabIndex = 28;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(569, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 2;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -392,7 +401,7 @@ namespace hci
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(517, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(164, 13);
+            this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 0;
             // 
             // button2
@@ -407,14 +416,6 @@ namespace hci
             this.button2.Text = "Check Out";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(569, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 2;
-            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,14 +425,14 @@ namespace hci
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txbxQuantity);
+            this.Controls.Add(this.txbxUserOrder);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbxStocks);
+            this.Controls.Add(this.txbxQty);
+            this.Controls.Add(this.txbxVariant);
+            this.Controls.Add(this.txbxItemName);
+            this.Controls.Add(this.txbxSKU);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -470,14 +471,14 @@ namespace hci
         private System.Windows.Forms.Button vcdbtn;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txbxQuantity;
+        private System.Windows.Forms.TextBox txbxUserOrder;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbxStocks;
+        private System.Windows.Forms.TextBox txbxQty;
+        private System.Windows.Forms.TextBox txbxVariant;
+        private System.Windows.Forms.TextBox txbxItemName;
+        private System.Windows.Forms.TextBox txbxSKU;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
