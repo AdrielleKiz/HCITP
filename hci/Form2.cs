@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
-// Sign Up
-
 namespace hci
 {
     public partial class Form2 : Form
