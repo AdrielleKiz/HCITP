@@ -5,6 +5,9 @@ using System.Data;
 using System.Data.SQLite;
 
 using System.Windows.Forms;
+
+// Products
+
 namespace hci
 {
     public partial class Form5 : Form
