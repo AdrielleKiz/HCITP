@@ -65,5 +65,15 @@ namespace hci
             label1.Text = Form1.SetValueForText1;
             label10.Text = Form1.Date;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
