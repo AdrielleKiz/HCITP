@@ -57,6 +57,7 @@
             this.passtxtbox.Name = "passtxtbox";
             this.passtxtbox.Size = new System.Drawing.Size(281, 22);
             this.passtxtbox.TabIndex = 1;
+            this.passtxtbox.PasswordChar = '*';
             // 
             // label1
             // 

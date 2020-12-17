@@ -117,9 +117,8 @@ namespace hci
             {
                 foreach (DataGridViewRow row in dgvprdtdtls.Rows)
                 {
-                    MessageBox.Show(searchBox.Text);
                     var cellValue = row.Cells[0].Value;
-                    if (cellValue != null && cellValue.ToString().ToUpper() == searchBox.Text.ToUpper())
+                    if (cellValue != null && cellValue.ToString().ToUpper() == searchBox.Text.ToUpper() || row.Cells[2].Value != null && row.Cells[2].Value.ToString().ToUpper() == searchBox.Text.ToUpper())
                     {
                         row.Selected = true;
                         row.Visible = true;
