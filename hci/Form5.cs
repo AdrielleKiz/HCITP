@@ -246,10 +246,5 @@ namespace hci
                 }
             }
         }
-
-        private void dgvprdtdtls_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

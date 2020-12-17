@@ -61,5 +61,10 @@ namespace hci
         {
             this.Close();
         }
+
+        private void dgvprdtdtls_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

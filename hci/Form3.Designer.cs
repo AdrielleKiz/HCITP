@@ -61,7 +61,7 @@ namespace hci
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(575, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 2;
             // 
             // label11
@@ -69,7 +69,7 @@ namespace hci
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(517, 47);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 17);
+            this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 1;
             this.label11.Text = "User: ";
             // 
@@ -78,7 +78,7 @@ namespace hci
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(517, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 17);
+            this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 0;
             // 
             // button6

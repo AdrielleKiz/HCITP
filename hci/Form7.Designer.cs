@@ -62,11 +62,10 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvemprecord.Location = new System.Drawing.Point(0, 159);
-            this.dgvemprecord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvemprecord.Location = new System.Drawing.Point(0, 129);
             this.dgvemprecord.Name = "dgvemprecord";
             this.dgvemprecord.RowHeadersWidth = 51;
-            this.dgvemprecord.Size = new System.Drawing.Size(865, 485);
+            this.dgvemprecord.Size = new System.Drawing.Size(649, 394);
             this.dgvemprecord.TabIndex = 0;
             this.dgvemprecord.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvemprecord_CellContentClick);
             // 
@@ -133,10 +132,9 @@
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Wheat;
-            this.btnExit.Location = new System.Drawing.Point(9, 98);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Location = new System.Drawing.Point(7, 80);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(59, 48);
+            this.btnExit.Size = new System.Drawing.Size(44, 39);
             this.btnExit.TabIndex = 26;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.Exit);
@@ -145,10 +143,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(260, 113);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(195, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 34);
+            this.label1.Size = new System.Drawing.Size(256, 27);
             this.label1.TabIndex = 27;
             this.label1.Text = "EMPLOYEES RECORD";
             // 
@@ -160,37 +157,33 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(865, 92);
+            this.panel2.Size = new System.Drawing.Size(649, 75);
             this.panel2.TabIndex = 32;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(760, 58);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(497, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 2;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(689, 58);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(462, 47);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 17);
+            this.label11.Size = new System.Drawing.Size(29, 13);
             this.label11.TabIndex = 1;
             this.label11.Text = "User";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(689, 22);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(462, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 17);
+            this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 0;
             // 
             // button1
@@ -200,27 +193,25 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Wheat;
-            this.button1.Location = new System.Drawing.Point(793, 100);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(595, 81);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 48);
+            this.button1.Size = new System.Drawing.Size(42, 39);
             this.button1.TabIndex = 36;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // Form7
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(865, 642);
+            this.ClientSize = new System.Drawing.Size(649, 522);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.dgvemprecord);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form7";

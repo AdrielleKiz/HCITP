@@ -89,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(575, 47);
+            this.label2.Location = new System.Drawing.Point(497, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 2;
@@ -97,7 +97,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(517, 47);
+            this.label11.Location = new System.Drawing.Point(462, 47);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 13);
             this.label11.TabIndex = 1;
@@ -106,7 +106,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(517, 18);
+            this.label10.Location = new System.Drawing.Point(462, 20);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 0;
@@ -124,13 +124,14 @@
             this.Column4,
             this.Column5});
             this.dgvprdtdtls.Location = new System.Drawing.Point(0, 126);
-            this.dgvprdtdtls.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvprdtdtls.Margin = new System.Windows.Forms.Padding(2);
             this.dgvprdtdtls.Name = "dgvprdtdtls";
             this.dgvprdtdtls.ReadOnly = true;
             this.dgvprdtdtls.RowHeadersWidth = 51;
             this.dgvprdtdtls.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvprdtdtls.Size = new System.Drawing.Size(649, 342);
             this.dgvprdtdtls.TabIndex = 33;
+            this.dgvprdtdtls.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvprdtdtls_CellContentClick);
             // 
             // Column1
             // 
@@ -166,7 +167,6 @@
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
             // 
             // Column6
             // 
