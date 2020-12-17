@@ -509,7 +509,7 @@ namespace hci
                     con.Open();
                     SQLiteCommand command = new SQLiteCommand();
                     command = con.CreateCommand();
-                    command.CommandText = "SELECT * FROM ProductDetails WHERE ItemName = '" + this.txbxUserOrder.Text + "';";
+                    command.CommandText = "SELECT * FROM ProductDetails WHERE ItemName = '" + this.txbxUserOrder.Text + "' COLLATE NOCASE;";
                     SQLiteDataReader DR = command.ExecuteReader();
 
                     while (DR.Read())
