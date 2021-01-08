@@ -37,8 +37,6 @@
             this.txbxUname = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txbxNum = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,6 +45,10 @@
             this.txbxAdd = new System.Windows.Forms.TextBox();
             this.txbxLastN = new System.Windows.Forms.TextBox();
             this.txbxFirstN = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtboxEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(89, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,45 +79,47 @@
             this.button2.BackColor = System.Drawing.Color.Beige;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(411, 481);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(419, 538);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 46);
             this.button2.TabIndex = 37;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btnCancel);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Beige;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(303, 481);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(296, 538);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 46);
             this.button1.TabIndex = 36;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnSave);
             // 
             // txbxPass
             // 
             this.txbxPass.BackColor = System.Drawing.SystemColors.Info;
             this.txbxPass.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxPass.Location = new System.Drawing.Point(16, 386);
-            this.txbxPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbxPass.Margin = new System.Windows.Forms.Padding(4);
             this.txbxPass.Multiline = true;
             this.txbxPass.Name = "txbxPass";
+            this.txbxPass.PasswordChar = '*';
             this.txbxPass.Size = new System.Drawing.Size(493, 36);
             this.txbxPass.TabIndex = 35;
-            this.txbxPass.PasswordChar = '*';
             // 
             // txbxUname
             // 
             this.txbxUname.BackColor = System.Drawing.SystemColors.Info;
             this.txbxUname.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxUname.Location = new System.Drawing.Point(16, 322);
-            this.txbxUname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbxUname.Margin = new System.Windows.Forms.Padding(4);
             this.txbxUname.Multiline = true;
             this.txbxUname.Name = "txbxUname";
             this.txbxUname.Size = new System.Drawing.Size(493, 36);
@@ -143,39 +147,12 @@
             this.label8.TabIndex = 32;
             this.label8.Text = "Create Username";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 427);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 19);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Position";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox1.DisplayMember = "Administration";
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Employee"});
-            this.comboBox1.Location = new System.Drawing.Point(16, 450);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 26);
-            this.comboBox1.TabIndex = 30;
-            this.comboBox1.Text = "Adminitrator";
-            this.comboBox1.ValueMember = "Employee";
-            // 
             // txbxNum
             // 
             this.txbxNum.BackColor = System.Drawing.SystemColors.Info;
             this.txbxNum.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxNum.Location = new System.Drawing.Point(16, 260);
-            this.txbxNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbxNum.Margin = new System.Windows.Forms.Padding(4);
             this.txbxNum.Multiline = true;
             this.txbxNum.Name = "txbxNum";
             this.txbxNum.Size = new System.Drawing.Size(493, 35);
@@ -230,7 +207,7 @@
             this.txbxAdd.BackColor = System.Drawing.SystemColors.Info;
             this.txbxAdd.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxAdd.Location = new System.Drawing.Point(16, 196);
-            this.txbxAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbxAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txbxAdd.Multiline = true;
             this.txbxAdd.Name = "txbxAdd";
             this.txbxAdd.Size = new System.Drawing.Size(493, 34);
@@ -241,7 +218,7 @@
             this.txbxLastN.BackColor = System.Drawing.SystemColors.Info;
             this.txbxLastN.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxLastN.Location = new System.Drawing.Point(263, 128);
-            this.txbxLastN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbxLastN.Margin = new System.Windows.Forms.Padding(4);
             this.txbxLastN.Multiline = true;
             this.txbxLastN.Name = "txbxLastN";
             this.txbxLastN.Size = new System.Drawing.Size(252, 34);
@@ -252,18 +229,71 @@
             this.txbxFirstN.BackColor = System.Drawing.SystemColors.Info;
             this.txbxFirstN.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxFirstN.Location = new System.Drawing.Point(16, 128);
-            this.txbxFirstN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbxFirstN.Margin = new System.Windows.Forms.Padding(4);
             this.txbxFirstN.Multiline = true;
             this.txbxFirstN.Name = "txbxFirstN";
             this.txbxFirstN.Size = new System.Drawing.Size(237, 34);
             this.txbxFirstN.TabIndex = 22;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.comboBox1.DisplayMember = "Administration";
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Employee"});
+            this.comboBox1.Location = new System.Drawing.Point(16, 512);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(196, 26);
+            this.comboBox1.TabIndex = 30;
+            this.comboBox1.Text = "Adminitrator";
+            this.comboBox1.ValueMember = "Employee";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(15, 489);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 19);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Position";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(15, 426);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(113, 19);
+            this.lblEmail.TabIndex = 40;
+            this.lblEmail.Text = "Email Address";
+            // 
+            // txtboxEmail
+            // 
+            this.txtboxEmail.BackColor = System.Drawing.SystemColors.Info;
+            this.txtboxEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxEmail.Location = new System.Drawing.Point(16, 449);
+            this.txtboxEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtboxEmail.Multiline = true;
+            this.txtboxEmail.Name = "txtboxEmail";
+            this.txtboxEmail.PasswordChar = '*';
+            this.txtboxEmail.Size = new System.Drawing.Size(493, 36);
+            this.txtboxEmail.TabIndex = 41;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(532, 558);
+            this.ClientSize = new System.Drawing.Size(532, 593);
+            this.Controls.Add(this.txtboxEmail);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
@@ -283,7 +313,7 @@
             this.Controls.Add(this.txbxLastN);
             this.Controls.Add(this.txbxFirstN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";
@@ -306,8 +336,6 @@
         private System.Windows.Forms.TextBox txbxUname;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txbxNum;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -316,5 +344,9 @@
         private System.Windows.Forms.TextBox txbxAdd;
         private System.Windows.Forms.TextBox txbxLastN;
         private System.Windows.Forms.TextBox txbxFirstN;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtboxEmail;
     }
 }
