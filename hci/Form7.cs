@@ -35,6 +35,12 @@ namespace hci
 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = true;
+            Form2 signup = new Form2();
+            signup.Show();
+        }
+
     }
 }
