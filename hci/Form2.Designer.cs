@@ -108,6 +108,7 @@
             this.txbxPass.Name = "txbxPass";
             this.txbxPass.Size = new System.Drawing.Size(493, 36);
             this.txbxPass.TabIndex = 35;
+            this.txbxPass.PasswordChar = '*';
             // 
             // txbxUname
             // 
